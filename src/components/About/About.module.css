@@ -1,0 +1,199 @@
+.about {
+  background: linear-gradient(180deg, transparent 0%, rgba(67, 193, 206, 0.05) 100%);
+}
+
+.aboutContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 calc(var(--spacing-unit) * 3);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--spacing-unit) * 8);
+  align-items: center;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit) * 3);
+}
+
+.aboutTitle {
+  font-size: 2.75rem;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit) * 2);
+}
+
+.textContent p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: rgba(240, 244, 248, 0.85);
+  margin-bottom: 0;
+}
+
+.teamRoles h3 {
+  font-size: 1.75rem;
+  margin-bottom: calc(var(--spacing-unit) * 3);
+  color: var(--color-accent-teal);
+}
+
+.rolesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(var(--spacing-unit) * 2);
+}
+
+.roleCard {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit) * 1.5);
+  padding: calc(var(--spacing-unit) * 2);
+  background: rgba(67, 193, 206, 0.1);
+  border: 1px solid rgba(67, 193, 206, 0.3);
+  border-radius: calc(var(--spacing-unit) * 2);
+  transition: all 0.3s ease;
+}
+
+.roleCard:hover {
+  background: rgba(67, 193, 206, 0.15);
+  transform: translateX(8px);
+  border-color: var(--color-accent-teal);
+}
+
+.roleCard i {
+  font-size: 1.5rem;
+  color: var(--color-accent-teal);
+}
+
+.roleCard span {
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.aboutImage {
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.teamImage {
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--spacing-unit) * 3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(67, 193, 206, 0.3);
+}
+
+.statsBadge {
+  position: absolute;
+  bottom: calc(var(--spacing-unit) * 3);
+  right: calc(var(--spacing-unit) * 3);
+  background: rgba(25, 25, 59, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-accent-teal);
+  border-radius: calc(var(--spacing-unit) * 2);
+  padding: calc(var(--spacing-unit) * 2);
+  display: flex;
+  gap: calc(var(--spacing-unit) * 3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--spacing-unit) * 0.5);
+}
+
+.statNumber {
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: rgba(240, 244, 248, 0.7);
+}
+
+@media (max-width: 1024px) {
+  .aboutContainer {
+    gap: calc(var(--spacing-unit) * 4);
+  }
+
+  .aboutTitle {
+    font-size: 2.25rem;
+  }
+
+  .textContent p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    grid-template-columns: 1fr;
+    gap: calc(var(--spacing-unit) * 4);
+  }
+
+  .aboutTitle {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .rolesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .teamRoles h3 {
+    text-align: center;
+  }
+
+  .statsBadge {
+    position: static;
+    margin-top: calc(var(--spacing-unit) * 2);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .aboutTitle {
+    font-size: 1.75rem;
+  }
+
+  .textContent p {
+    font-size: 0.9375rem;
+  }
+
+  .teamRoles h3 {
+    font-size: 1.5rem;
+  }
+
+  .roleCard {
+    padding: calc(var(--spacing-unit) * 1.5);
+  }
+
+  .roleCard i {
+    font-size: 1.25rem;
+  }
+
+  .roleCard span {
+    font-size: 0.875rem;
+  }
+
+  .statsBadge {
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 2);
+  }
+}

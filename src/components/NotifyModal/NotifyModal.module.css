@@ -1,0 +1,93 @@
+.notifyDialog :global(.p-dialog) {
+  background: rgba(25, 25, 59, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(67, 193, 206, 0.3);
+  border-radius: calc(var(--spacing-unit) * 3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 90%;
+}
+
+.notifyDialog :global(.p-dialog-header) {
+  background: transparent;
+  border-bottom: 1px solid rgba(67, 193, 206, 0.2);
+  padding: calc(var(--spacing-unit) * 3);
+  color: var(--color-text-light);
+}
+
+.notifyDialog :global(.p-dialog-content) {
+  background: transparent;
+  padding: calc(var(--spacing-unit) * 3);
+  color: var(--color-text-light);
+}
+
+.notifyForm {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit) * 2.5);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit));
+}
+
+.formGroup label {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-text-light);
+}
+
+.formGroup input {
+  padding: calc(var(--spacing-unit) * 1.5);
+  background: rgba(25, 25, 59, 0.6);
+  border: 1px solid rgba(67, 193, 206, 0.3);
+  border-radius: calc(var(--spacing-unit) * 1.5);
+  color: var(--color-text-light);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--color-accent-teal);
+  box-shadow: 0 0 0 3px rgba(67, 193, 206, 0.1);
+}
+
+.formGroup input::placeholder {
+  color: rgba(240, 244, 248, 0.4);
+}
+
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing-unit));
+  padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
+  background: linear-gradient(90deg, var(--color-accent-teal), var(--color-accent-blue));
+  color: white;
+  border: none;
+  border-radius: calc(var(--spacing-unit) * 1.5);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: calc(var(--spacing-unit));
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(67, 193, 206, 0.3);
+}
+
+@media (max-width: 575px) {
+  .notifyDialog :global(.p-dialog) {
+    width: 95%;
+  }
+
+  .notifyDialog :global(.p-dialog-header),
+  .notifyDialog :global(.p-dialog-content) {
+    padding: calc(var(--spacing-unit) * 2);
+  }
+}

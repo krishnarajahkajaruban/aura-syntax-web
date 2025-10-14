@@ -1,0 +1,237 @@
+import { Service, Project, UpcomingProject, Milestone } from '../types';
+
+export const services: Service[] = [
+  {
+    id: 1,
+    icon: 'bi-globe',
+    serviceName: 'Web Development',
+    description: 'Custom websites and web applications built with modern frameworks, responsive design, and optimized performance.',
+    serviceFeatures: [
+      { id: 1, serviceId: 1, feature: 'Frontend Development' },
+      { id: 2, serviceId: 1, feature: 'Backend Development' },
+      { id: 3, serviceId: 1, feature: 'Full-Stack Solutions' },
+      { id: 4, serviceId: 1, feature: 'Custom Websites' },
+      { id: 5, serviceId: 1, feature: 'Web Applications' },
+      { id: 6, serviceId: 1, feature: 'CMS Development' },
+    ],
+    status: true,
+  },
+  {
+    id: 2,
+    icon: 'bi-phone',
+    serviceName: 'Mobile Development',
+    description: 'Native and cross-platform mobile applications for iOS and Android with seamless user experiences.',
+    serviceFeatures: [
+      { id: 7, serviceId: 2, feature: 'iOS App Development' },
+      { id: 8, serviceId: 2, feature: 'Android App Development' },
+      { id: 9, serviceId: 2, feature: 'Cross-Platform Apps' },
+      { id: 10, serviceId: 2, feature: 'Mobile UI/UX Design' },
+      { id: 11, serviceId: 2, feature: 'App Maintenance' },
+    ],
+    status: true,
+  },
+  {
+    id: 3,
+    icon: 'bi-cpu',
+    serviceName: 'AI & Machine Learning',
+    description: 'Intelligent solutions powered by artificial intelligence and machine learning algorithms for data-driven insights.',
+    serviceFeatures: [
+      { id: 12, serviceId: 3, feature: 'Predictive Analytics' },
+      { id: 13, serviceId: 3, feature: 'Natural Language Processing' },
+      { id: 14, serviceId: 3, feature: 'Computer Vision' },
+      { id: 15, serviceId: 3, feature: 'Deep Learning Models' },
+      { id: 16, serviceId: 3, feature: 'AI Integration' },
+    ],
+    status: true,
+  },
+  {
+    id: 4,
+    icon: 'bi-link-45deg',
+    serviceName: 'Blockchain',
+    description: 'Decentralized applications and smart contracts built on blockchain technology for secure and transparent solutions.',
+    serviceFeatures: [
+      { id: 17, serviceId: 4, feature: 'Smart Contract Development' },
+      { id: 18, serviceId: 4, feature: 'DApp Development' },
+      { id: 19, serviceId: 4, feature: 'Blockchain Consulting' },
+      { id: 20, serviceId: 4, feature: 'NFT Solutions' },
+      { id: 21, serviceId: 4, feature: 'Crypto Wallets' },
+    ],
+    status: true,
+  },
+  {
+    id: 5,
+    icon: 'bi-cloud',
+    serviceName: 'Cloud & DevOps',
+    description: 'Scalable cloud infrastructure and automated deployment pipelines for efficient and reliable operations.',
+    serviceFeatures: [
+      { id: 22, serviceId: 5, feature: 'Cloud Migration' },
+      { id: 23, serviceId: 5, feature: 'CI/CD Pipelines' },
+      { id: 24, serviceId: 5, feature: 'Infrastructure as Code' },
+      { id: 25, serviceId: 5, feature: 'Container Orchestration' },
+      { id: 26, serviceId: 5, feature: 'Cloud Security' },
+    ],
+    status: true,
+  },
+  {
+    id: 6,
+    icon: 'bi-palette',
+    serviceName: 'UI/UX Design',
+    description: 'User-centered design solutions that combine aesthetics with functionality for exceptional digital experiences.',
+    serviceFeatures: [
+      { id: 27, serviceId: 6, feature: 'User Research' },
+      { id: 28, serviceId: 6, feature: 'Wireframing & Prototyping' },
+      { id: 29, serviceId: 6, feature: 'Visual Design' },
+      { id: 30, serviceId: 6, feature: 'Interaction Design' },
+      { id: 31, serviceId: 6, feature: 'Usability Testing' },
+    ],
+    status: true,
+  },
+  {
+    id: 7,
+    icon: 'bi-cart',
+    serviceName: 'E-commerce',
+    description: 'Complete e-commerce solutions with secure payment processing and inventory management.',
+    serviceFeatures: [
+      { id: 32, serviceId: 7, feature: 'Online Store Development' },
+      { id: 33, serviceId: 7, feature: 'Payment Gateway Integration' },
+      { id: 34, serviceId: 7, feature: 'Shopping Cart Solutions' },
+      { id: 35, serviceId: 7, feature: 'Product Management' },
+      { id: 36, serviceId: 7, feature: 'Order Processing' },
+    ],
+    status: true,
+  },
+  {
+    id: 8,
+    icon: 'bi-diagram-3',
+    serviceName: 'System Integration',
+    description: 'Seamless integration of disparate systems and applications for unified business operations.',
+    serviceFeatures: [
+      { id: 37, serviceId: 8, feature: 'API Development' },
+      { id: 38, serviceId: 8, feature: 'Third-Party Integration' },
+      { id: 39, serviceId: 8, feature: 'Legacy System Modernization' },
+      { id: 40, serviceId: 8, feature: 'Data Synchronization' },
+      { id: 41, serviceId: 8, feature: 'Middleware Solutions' },
+    ],
+    status: true,
+  },
+  {
+    id: 9,
+    icon: 'bi-lightbulb',
+    serviceName: 'IT Consulting',
+    description: 'Strategic technology consulting to help businesses make informed decisions and optimize their IT infrastructure.',
+    serviceFeatures: [
+      { id: 42, serviceId: 9, feature: 'Technology Strategy' },
+      { id: 43, serviceId: 9, feature: 'Digital Transformation' },
+      { id: 44, serviceId: 9, feature: 'Architecture Design' },
+      { id: 45, serviceId: 9, feature: 'Security Audits' },
+      { id: 46, serviceId: 9, feature: 'Performance Optimization' },
+    ],
+    status: true,
+  },
+];
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    name: 'FinanceHub',
+    image: 'https://images.pexels.com/photos/6770610/pexels-photo-6770610.jpeg',
+    projectType: 'Web Application',
+    projectDescriptions: [
+      { id: 1, projectId: 1, description: 'A comprehensive financial management platform for small businesses.' },
+      { id: 2, projectId: 1, description: 'Features include invoicing, expense tracking, and financial reporting.' },
+      { id: 3, projectId: 1, description: 'Built with React, Node.js, and PostgreSQL for robust performance.' },
+    ],
+    hasPreview: true,
+    previewLink: 'https://example.com/financehub',
+    projectSnapShots: [
+      { id: 1, projectId: 1, imagePath: 'https://images.pexels.com/photos/6770610/pexels-photo-6770610.jpeg' },
+      { id: 2, projectId: 1, imagePath: 'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg' },
+    ],
+    status: true,
+  },
+  {
+    id: 2,
+    name: 'HealthTrack',
+    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg',
+    projectType: 'Mobile App',
+    projectDescriptions: [
+      { id: 4, projectId: 2, description: 'Mobile health tracking application with AI-powered insights.' },
+      { id: 5, projectId: 2, description: 'Track fitness activities, nutrition, and health metrics in one place.' },
+      { id: 6, projectId: 2, description: 'Integrated with wearable devices for real-time monitoring.' },
+    ],
+    hasPreview: false,
+    previewLink: '',
+    projectSnapShots: [
+      { id: 3, projectId: 2, imagePath: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg' },
+      { id: 4, projectId: 2, imagePath: 'https://images.pexels.com/photos/3766180/pexels-photo-3766180.jpeg' },
+    ],
+    status: true,
+  },
+  {
+    id: 3,
+    name: 'EduLearn',
+    image: 'https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg',
+    projectType: 'E-Learning Platform',
+    projectDescriptions: [
+      { id: 7, projectId: 3, description: 'Interactive online learning platform with live classes and recorded content.' },
+      { id: 8, projectId: 3, description: 'Features include course management, assessments, and student analytics.' },
+      { id: 9, projectId: 3, description: 'Supporting thousands of students with high-quality education.' },
+    ],
+    hasPreview: true,
+    previewLink: 'https://example.com/edulearn',
+    projectSnapShots: [
+      { id: 5, projectId: 3, imagePath: 'https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg' },
+      { id: 6, projectId: 3, imagePath: 'https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg' },
+    ],
+    status: true,
+  },
+  {
+    id: 4,
+    name: 'ShopSmart',
+    image: 'https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg',
+    projectType: 'E-commerce',
+    projectDescriptions: [
+      { id: 10, projectId: 4, description: 'Modern e-commerce platform with AI-powered product recommendations.' },
+      { id: 11, projectId: 4, description: 'Secure payment processing and inventory management system.' },
+      { id: 12, projectId: 4, description: 'Optimized for mobile shopping with seamless checkout experience.' },
+    ],
+    hasPreview: true,
+    previewLink: 'https://example.com/shopsmart',
+    projectSnapShots: [
+      { id: 7, projectId: 4, imagePath: 'https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg' },
+      { id: 8, projectId: 4, imagePath: 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg' },
+    ],
+    status: true,
+  },
+];
+
+export const upcomingProjects: UpcomingProject[] = [
+  {
+    id: 1,
+    projectName: 'CryptoVault',
+    image: 'https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg',
+    description: 'Secure cryptocurrency wallet with multi-chain support and DeFi integration.',
+    status: true,
+  },
+  {
+    id: 2,
+    projectName: 'SmartCity Dashboard',
+    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg',
+    description: 'IoT-powered city management dashboard for real-time monitoring and analytics.',
+    status: true,
+  },
+  {
+    id: 3,
+    projectName: 'TravelMate AI',
+    image: 'https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg',
+    description: 'AI-powered travel planning assistant with personalized recommendations.',
+    status: true,
+  },
+];
+
+export const milestones: Milestone[] = [
+  { id: 1, title: 'Projects Delivered', count: 150, icon: 'bi-check-circle' },
+  { id: 2, title: 'Happy Clients', count: 120, icon: 'bi-people' },
+  { id: 3, title: 'Years of Experience', count: 8, icon: 'bi-calendar' },
+  { id: 4, title: 'Team Members', count: 45, icon: 'bi-person-badge' },
+];
