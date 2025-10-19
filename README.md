@@ -1,5 +1,5 @@
 🌌 AuraSyntax
-<img width="192" height="192" alt="pwa-192x192" src="https://github.com/user-attachments/assets/71362f47-e58e-4c59-aaff-add5744d3a45" />
+<img width="371" height="100" alt="logo-sm" src="https://github.com/user-attachments/assets/a046848d-06fb-4b8e-b949-0eaf0d36e5eb" />
 
 Craft the Logic. Build What’s Next.
 
