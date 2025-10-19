@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { toast } from 'sonner';
 import { z } from 'zod';
-import contactIllustration from '@/assets/contact-illustration.png';
 import '../styles/custom.css';
 import { Link } from 'react-router-dom';
+import { contactIllustration } from '@/utils/appData';
 
 const contactSchema = z.object({
   firstName: z.string()

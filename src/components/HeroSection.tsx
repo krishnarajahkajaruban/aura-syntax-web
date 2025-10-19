@@ -2,9 +2,9 @@
 import { motion } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import { useNavigate } from 'react-router-dom';
-import heroIllustration from '@/assets/hero-illustration.png';
 import { services } from '@/data/mockData';
 import '../styles/custom.css';
+import { heroIllustration } from '@/utils/appData';
 
 const HeroSection = () => {
   const navigate = useNavigate();

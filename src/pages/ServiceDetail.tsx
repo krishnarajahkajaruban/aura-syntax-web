@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Fade } from 'react-awesome-reveal';
 import gsap from 'gsap';
@@ -48,7 +48,7 @@ const ServiceDetail = () => {
   }
 
   return (
-    <div>
+    <React.Fragment>
       <Navbar />
 
       <section className="section service-section">
@@ -107,7 +107,7 @@ const ServiceDetail = () => {
       </section>
 
       <Footer />
-    </div>
+    </React.Fragment>
   );
 };
 

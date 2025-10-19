@@ -4,7 +4,7 @@ export const services: Service[] = [
   {
     id: 1,
     icon: 'bi-globe',
-    iconImg: "/src/assets/services/web-development.png",
+    iconImg: "/assets/services/web-development.png",
     serviceName: 'Web Development',
     description: 'Build modern, responsive web applications with cutting-edge technologies and best practices.',
     serviceFeatures: [
@@ -20,7 +20,7 @@ export const services: Service[] = [
   {
     id: 2,
     icon: 'bi-phone',
-    iconImg: "/src/assets/services/mobile-development.png",
+    iconImg: "/assets/services/mobile-development.png",
     serviceName: 'Mobile Development',
     description: 'Create powerful mobile applications for iOS and Android with native performance and beautiful UX.',
     serviceFeatures: [
@@ -36,7 +36,7 @@ export const services: Service[] = [
   {
     id: 3,
     icon: 'bi-cpu',
-    iconImg: "/src/assets/services/ai-and-machine-learning.png",
+    iconImg: "/assets/services/ai-and-machine-learning.png",
     serviceName: 'AI & Machine Learning',
     description: 'Implement intelligent solutions with AI and machine learning to automate and optimize your business.',
     serviceFeatures: [
@@ -52,7 +52,7 @@ export const services: Service[] = [
   {
     id: 4,
     icon: 'bi-shield-check',
-    iconImg: "/src/assets/services/blockchain.png",
+    iconImg: "/assets/services/blockchain.png",
     serviceName: 'Blockchain',
     description: 'Develop secure, decentralized applications and smart contracts on various blockchain platforms.',
     serviceFeatures: [
@@ -68,7 +68,7 @@ export const services: Service[] = [
   {
     id: 5,
     icon: 'bi-cloud-arrow-up',
-    iconImg: "/src/assets/services/cloud-and-devops.png",
+    iconImg: "/assets/services/cloud-and-devops.png",
     serviceName: 'Cloud & DevOps',
     description: 'Build scalable cloud infrastructure with automated CI/CD pipelines for reliable deployments.',
     serviceFeatures: [
@@ -84,7 +84,7 @@ export const services: Service[] = [
   {
     id: 6,
     icon: 'bi-palette',
-    iconImg: "/src/assets/services/ui-ux-design.png",
+    iconImg: "/assets/services/ui-ux-design.png",
     serviceName: 'UI/UX Design',
     description: 'Design beautiful, intuitive interfaces that delight users and drive engagement.',
     serviceFeatures: [
@@ -100,7 +100,7 @@ export const services: Service[] = [
   {
     id: 7,
     icon: 'bi-cart',
-    iconImg: "/src/assets/services/e-commerce.png",
+    iconImg: "/assets/services/e-commerce.png",
     serviceName: 'E-commerce',
     description: 'Build powerful online stores with seamless shopping experiences and secure payment processing.',
     serviceFeatures: [
@@ -116,7 +116,7 @@ export const services: Service[] = [
   {
     id: 8,
     icon: 'bi-diagram-3',
-    iconImg: "/src/assets/services/system-integration.png",
+    iconImg: "/assets/services/system-integration.png",
     serviceName: 'System Integration',
     description: 'Connect and integrate disparate systems for seamless data flow and business process automation.',
     serviceFeatures: [
@@ -132,7 +132,7 @@ export const services: Service[] = [
   {
     id: 9,
     icon: 'bi-headset',
-    iconImg: "/src/assets/services/it-consulting.png",
+    iconImg: "/assets/services/it-consulting.png",
     serviceName: 'IT Consulting',
     description: 'Get expert guidance on technology strategy, architecture decisions, and digital transformation.',
     serviceFeatures: [
@@ -148,7 +148,7 @@ export const services: Service[] = [
   {
     id: 10,
     icon: 'bi-bar-chart',
-    iconImg: "/src/assets/services/data-analytics.png",
+    iconImg: "/assets/services/data-analytics.png",
     serviceName: 'Data Analytics',
     description: 'Transform raw data into actionable insights to drive smarter business decisions.',
     serviceFeatures: [
@@ -164,7 +164,7 @@ export const services: Service[] = [
   {
     id: 11,
     icon: 'bi-check-circle',
-    iconImg: "/src/assets/services/quality-assurance.png",
+    iconImg: "/assets/services/quality-assurance.png",
     serviceName: 'Quality Assurance',
     description: 'Ensure software reliability and performance with rigorous testing and QA practices.',
     serviceFeatures: [
@@ -180,7 +180,7 @@ export const services: Service[] = [
   {
     id: 12,
     icon: 'bi-shield-lock',
-    iconImg: "/src/assets/services/cyber-security.png",
+    iconImg: "/assets/services/cyber-security.png",
     serviceName: 'Cyber Security',
     description: 'Protect your business from digital threats with advanced security measures and monitoring.',
     serviceFeatures: [
@@ -199,8 +199,8 @@ export const projects: Project[] = [
   {
     id: 1,
     name: "Singai Restaurant",
-    image: "/src/assets/projects/singai-restaurant/cover.webp",
-    companyLogo: "/src/assets/projects/singai-restaurant/logo.png",
+    image: "/assets/projects/singai-restaurant/cover.webp",
+    companyLogo: "/assets/projects/singai-restaurant/logo.png",
     projectType: "Restaurant Management System",
     projectDescriptions: [
       {
@@ -237,19 +237,19 @@ export const projects: Project[] = [
     hasPreview: false,
     previewLink: '',
     projectSnapShots: [
-      { id: 1, projectId: 1, imagePath: "/src/assets/projects/singai-restaurant/snap-1.png" },
-      { id: 2, projectId: 1, imagePath: "/src/assets/projects/singai-restaurant/snap-2.png" },
-      { id: 3, projectId: 1, imagePath: "/src/assets/projects/singai-restaurant/snap-3.png" },
-      { id: 4, projectId: 1, imagePath: "/src/assets/projects/singai-restaurant/snap-4.png" },
-      { id: 5, projectId: 1, imagePath: "/src/assets/projects/singai-restaurant/snap-5.png" },
+      { id: 1, projectId: 1, imagePath: "/assets/projects/singai-restaurant/snap-1.png" },
+      { id: 2, projectId: 1, imagePath: "/assets/projects/singai-restaurant/snap-2.png" },
+      { id: 3, projectId: 1, imagePath: "/assets/projects/singai-restaurant/snap-3.png" },
+      { id: 4, projectId: 1, imagePath: "/assets/projects/singai-restaurant/snap-4.png" },
+      { id: 5, projectId: 1, imagePath: "/assets/projects/singai-restaurant/snap-5.png" },
     ],
     status: true
   },
   {
     id: 2,
     name: "Kover Drive",
-    image: "/src/assets/projects/kover-drive/cover.webp",
-    companyLogo: "/src/assets/projects/kover-drive/logo.png",
+    image: "/assets/projects/kover-drive/cover.webp",
+    companyLogo: "/assets/projects/kover-drive/logo.png",
     projectType: "Sports Lane Management System",
     projectDescriptions: [
       {
@@ -286,21 +286,21 @@ export const projects: Project[] = [
     hasPreview: true,
     previewLink: 'https://koverdrivesports.ca/',
     projectSnapShots: [
-      { id: 7, projectId: 2, imagePath: "/src/assets/projects/kover-drive/snap-1.png" },
-      { id: 8, projectId: 2, imagePath: "/src/assets/projects/kover-drive/snap-2.png" },
-      { id: 9, projectId: 2, imagePath: "/src/assets/projects/kover-drive/snap-3.png" },
-      { id: 10, projectId: 2, imagePath: "/src/assets/projects/kover-drive/snap-4.png" },
-      { id: 11, projectId: 2, imagePath: "/src/assets/projects/kover-drive/snap-5.png" },
-      { id: 12, projectId: 2, imagePath: "/src/assets/projects/kover-drive/snap-6.png" },
-      { id: 13, projectId: 2, imagePath: "/src/assets/projects/kover-drive/snap-7.png" }
+      { id: 7, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-1.png" },
+      { id: 8, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-2.png" },
+      { id: 9, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-3.png" },
+      { id: 10, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-4.png" },
+      { id: 11, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-5.png" },
+      { id: 12, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-6.png" },
+      { id: 13, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-7.png" }
     ],
     status: true
   },
   {
     id: 3,
     name: "The Parking Deals",
-    image: "/src/assets/projects/parking-deals/cover.webp",
-    companyLogo: "/src/assets/projects/parking-deals/logo.png",
+    image: "/assets/projects/parking-deals/cover.webp",
+    companyLogo: "/assets/projects/parking-deals/logo.png",
     projectType: "Airport Parking Management System",
     projectDescriptions: [
       {
@@ -343,13 +343,13 @@ export const projects: Project[] = [
     hasPreview: true,
     previewLink: 'https://www.theparkingdeals.co.uk/',
     projectSnapShots: [
-      { id: 14, projectId: 3, imagePath: "/src/assets/projects/parking-deals/snap-1.png" },
-      { id: 15, projectId: 3, imagePath: "/src/assets/projects/parking-deals/snap-2.png" },
-      { id: 16, projectId: 3, imagePath: "/src/assets/projects/parking-deals/snap-3.png" },
-      { id: 17, projectId: 3, imagePath: "/src/assets/projects/parking-deals/snap-4.png" },
-      { id: 18, projectId: 3, imagePath: "/src/assets/projects/parking-deals/snap-5.png" },
-      { id: 19, projectId: 3, imagePath: "/src/assets/projects/parking-deals/snap-6.png" },
-      { id: 20, projectId: 3, imagePath: "/src/assets/projects/parking-deals/snap-7.png" }
+      { id: 14, projectId: 3, imagePath: "/assets/projects/parking-deals/snap-1.png" },
+      { id: 15, projectId: 3, imagePath: "/assets/projects/parking-deals/snap-2.png" },
+      { id: 16, projectId: 3, imagePath: "/assets/projects/parking-deals/snap-3.png" },
+      { id: 17, projectId: 3, imagePath: "/assets/projects/parking-deals/snap-4.png" },
+      { id: 18, projectId: 3, imagePath: "/assets/projects/parking-deals/snap-5.png" },
+      { id: 19, projectId: 3, imagePath: "/assets/projects/parking-deals/snap-6.png" },
+      { id: 20, projectId: 3, imagePath: "/assets/projects/parking-deals/snap-7.png" }
     ],
     status: true
   }
@@ -360,21 +360,21 @@ export const upcomingProjects: UpcomingProject[] = [
   {
     id: 1,
     projectName: 'Recruitment & Job Portal',
-    image: '/src/assets/upcoming-projects/recruitment-job-portal-system.webp',
+    image: '/assets/upcoming-projects/recruitment-job-portal-system.webp',
     description: 'A comprehensive web platform connecting employers and job seekers through smart matching, resume management, and real-time hiring tools. Mobile app version planned for future expansion.',
     status: true
   },
   {
     id: 2,
     projectName: 'Clinic Management System',
-    image: '/src/assets/upcoming-projects/clinic-management-system.webp',
+    image: '/assets/upcoming-projects/clinic-management-system.webp',
     description: 'A modern web system for managing appointments, patient records, billing, and doctor e-channeling with secure access. Mobile application integration is planned for future convenience.',
     status: true
   },
   {
     id: 3,
     projectName: 'Point of Sale System',
-    image: '/src/assets/upcoming-projects/pos-system.webp',
+    image: '/assets/upcoming-projects/pos-system.webp',
     description: 'A powerful web-based POS system for retail stores and supermarkets, enabling smooth billing, inventory management, and reporting. Mobile application support is planned for future updates.',
     status: true
   }

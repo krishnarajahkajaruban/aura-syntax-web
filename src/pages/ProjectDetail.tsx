@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Fade } from 'react-awesome-reveal';
 import { Dialog } from 'primereact/dialog';
@@ -57,7 +57,7 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div>
+    <React.Fragment>
       <Navbar />
 
       <section className="section project-detail-section">
@@ -177,7 +177,7 @@ const ProjectDetail = () => {
       <BackToTop />
 
       <Footer />
-    </div>
+    </React.Fragment>
   );
 };
 

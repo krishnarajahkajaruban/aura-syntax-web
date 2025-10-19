@@ -1,3 +1,4 @@
+import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -6,7 +7,7 @@ import BackToTop from '@/components/BackToTop';
 
 const Terms = () => {
   return (
-    <div>
+    <React.Fragment>
       <Navbar />
 
       <section className="section terms-policy-section">
@@ -109,7 +110,7 @@ const Terms = () => {
 
       <BackToTop />
       <Footer />
-    </div>
+    </React.Fragment>
   );
 };
 

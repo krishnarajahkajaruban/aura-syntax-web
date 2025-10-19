@@ -2,10 +2,10 @@ import { useEffect, useRef } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import logoPortrait from '@/assets/logo-portrait.png';
 import '../styles/custom.css';
 import '../styles/team.css';
 import '../styles/responsive.css';
+import { logoPortrait } from '@/utils/appData';
 
 gsap.registerPlugin(ScrollTrigger);
 

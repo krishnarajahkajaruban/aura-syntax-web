@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from '@/components/Navbar';
@@ -110,7 +110,7 @@ const Home = () => {
 
   return (
     <SmoothScroll>
-      <div>
+      <React.Fragment>
         <Navbar />
 
         <HeroSection />
@@ -134,7 +134,7 @@ const Home = () => {
         <Footer />
 
         <BackToTop />
-      </div>
+      </React.Fragment>
     </SmoothScroll>
   );
 };
