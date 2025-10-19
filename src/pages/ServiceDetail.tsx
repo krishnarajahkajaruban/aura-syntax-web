@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { services } from '@/data/mockData';
 import '../styles/custom.css';
+import BackToTop from '@/components/BackToTop';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -92,20 +93,36 @@ const ServiceDetail = () => {
           <Fade direction="up" delay={400} triggerOnce>
             <div className="text-center mt-5">
               <button
-                className="btn-primary-aura me-3"
+                className="btn-outline-aura d-inline-flex align-items-center me-sm-3 mb-3 mb-sm-0"
+                onClick={() => {
+                  navigate('/');
+                  setTimeout(() => {
+                    const element = document.getElementById('services');
+                    if (element) {
+                      const yOffset = -120;
+                      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                      window.scrollTo({ top: y, behavior: 'smooth' });
+                    }
+                  }, 100);
+                }}
+              >
+                <i className="bi bi-arrow-left"></i>
+                Back to Services
+              </button>
+
+              <button
+                className="btn-primary-aura"
                 onClick={() => handleGetStarted(service.serviceName)}
               >
                 Get Started
                 <i className="bi bi-arrow-right"></i>
-              </button>
-              <button className="btn-outline-aura" onClick={() => navigate('/')}>
-                Back to Home
               </button>
             </div>
           </Fade>
         </div>
       </section>
 
+      <BackToTop />
       <Footer />
     </React.Fragment>
   );

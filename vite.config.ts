@@ -19,7 +19,7 @@ export default defineConfig({
         short_name: "AuraSyntax",
         description: "AuraSyntax — Craft the Logic. Build What's Next.",
         theme_color: "#292f61",
-        background_color: "#292f61",
+        background_color: "#FFF",
         display: "standalone",
         start_url: "/",
         orientation: "portrait",

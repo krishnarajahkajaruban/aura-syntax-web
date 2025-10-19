@@ -165,8 +165,21 @@ const ProjectDetail = () => {
 
           <Fade direction="up" delay={600} triggerOnce>
             <div className="text-center mt-5">
-              <button className="btn-outline-aura" onClick={() => navigate('/')}>
-                <i className="bi bi-arrow-left me-2"></i>
+              <button
+                className="btn-outline-aura d-inline-flex align-items-center"
+                onClick={() => {
+                  navigate('/');
+                  setTimeout(() => {
+                    const element = document.getElementById('projects');
+                    if (element) {
+                      const yOffset = -120;
+                      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                      window.scrollTo({ top: y, behavior: 'smooth' });
+                    }
+                  }, 100);
+                }}
+              >
+                <i className="bi bi-arrow-left"></i>
                 Back to Projects
               </button>
             </div>
