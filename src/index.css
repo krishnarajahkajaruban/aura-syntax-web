@@ -1,0 +1,64 @@
+/* Import Bootstrap and PrimeReact - must come BEFORE @tailwind */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'primereact/resources/themes/lara-dark-cyan/theme.css';
+@import 'primereact/resources/primereact.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AuraSyntax Design System */
+:root {
+  /* Brand Colors - HSL */
+  --aura-dark-base: 236 36% 16%;
+  --aura-dark-mid: 217 37% 32%;
+  --aura-teal: 185 50% 52%;
+  --aura-blue: 225 82% 77%;
+  --aura-indigo: 237 25% 49%;
+  
+  /* Gradients */
+  --gradient-hero-title: linear-gradient(90deg, #2dd4bf 0%, #81cdf8 100%);
+  --gradient-background: linear-gradient(135deg, #19193b 0%, #354d73 100%);
+  --gradient-card: linear-gradient(135deg, rgba(25, 25, 59, 0.6) 0%, rgba(53, 77, 115, 0.4) 100%);
+  
+  /* Text Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  
+  /* Tailwind compatibility */
+  --background: 236 36% 16%;
+  --foreground: 210 40% 98%;
+  --card: 236 36% 16%;
+  --card-foreground: 210 40% 98%;
+  --popover: 236 36% 16%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 185 50% 52%;
+  --primary-foreground: 236 36% 16%;
+  --secondary: 217 37% 32%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217 37% 32%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 185 50% 52%;
+  --accent-foreground: 236 36% 16%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217 37% 32%;
+  --input: 217 37% 32%;
+  --ring: 185 50% 52%;
+  --radius: 1.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}

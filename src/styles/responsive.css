@@ -1,0 +1,675 @@
+/* For XXL Screen (768p(1366 x 768) above - 1080p , 1920 x 1080) */
+@media (min-width: 1400px) {
+    .navbar-aura {
+        max-width: 1400px;
+    }
+
+    .hero-title {
+        font-size: 3.2rem;
+    }
+
+    .hero-paragraph {
+        font-size: 1.05rem;
+    }
+}
+
+/* For XL Screen (Laptop - HD Ready Display) */
+@media only screen and (min-width: 1199.9px) and (max-width: 1399.98px) {
+    .navbar-aura {
+        max-width: 1140px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-section {
+        padding: 6rem 0 3rem;
+    }
+
+    .marquee-container {
+        row-gap: 0.5rem;
+    }
+
+    .hero-paragraph {
+        font-size: 0.95rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .section-paragraph {
+        font-size: 1rem;
+    }
+
+    .about-img {
+        max-width: 260px !important;
+    }
+
+    .team-icon-wrapper {
+        width: 90px;
+        height: 90px;
+    }
+
+    .team-icon {
+        font-size: 2.6rem;
+    }
+
+    .service-title {
+        font-size: 1.3rem;
+    }
+
+    .service-feature-list li {
+        font-size: 0.9rem;
+    }
+
+    .btn-outline-aura {
+        padding: 0.6rem 1.6rem;
+    }
+
+    .service-icon-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .uc-project-card-desc {
+        height: 110px;
+    }
+
+    .uc-project-card-img-area img {
+        height: 250px;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .terms-policy-section {
+        padding-top: 160px;
+    }
+
+    .service-section {
+        padding-top: 160px;
+    }
+
+    .project-detail-section {
+        padding-top: 160px;
+    }
+
+    .project-logo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .project-detail-head {
+        font-size: 1.8rem;
+    }
+}
+
+/* For LG (Large) Screen  */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .section-paragraph {
+        font-size: 1rem;
+    }
+
+    .about-img {
+        max-width: 260px !important;
+    }
+
+    .contact-form {
+        padding: 2.2rem;
+    }
+
+    .terms-policy-section {
+        padding-top: 160px;
+    }
+
+    .project-logo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .project-detail-head {
+        font-size: 1.8rem;
+    }
+
+    .project-detail-main-img {
+        margin-top: -50px;
+    }
+
+    .project-detail-sub {
+        width: 100%;
+    }
+}
+
+/* For MD (Medium) Screen (ipad) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .hero-img {
+        max-width: 80% !important;
+    }
+
+    .swiper-container {
+        padding: 2rem 0 3rem !important;
+    }
+
+    .milestone-timeline-section {
+        padding: 2rem 0 1rem !important;
+    }
+}
+
+/* For SM (Small) Screen (Tab) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .hero-img {
+        max-width: 80% !important;
+    }
+
+    .container {
+        max-width: 640px !important;
+    }
+
+    .swiper-container {
+        padding: 2rem 0 3rem !important;
+    }
+
+    .milestone-timeline-section {
+        padding: 3rem 0 1rem !important;
+    }
+}
+
+/* For Mobile Screen */
+@media (max-width: 575px) {
+
+    .navbar-aura {
+        top: 1.2rem !important;
+        width: calc(100% - 2.4rem);
+        padding: 0.8rem 0rem !important;
+    }
+
+    .navbar-menu .nav-link {
+        font-size: 0.95rem;
+    }
+
+    .container {
+        padding-left: 1.6rem !important;
+        padding-right: 1.6rem !important;
+    }
+
+    .hero-title {
+        font-size: 1.8rem !important;
+        line-height: 1.3em !important;
+    }
+
+    .hero-paragraph {
+        font-size: 0.9rem !important;
+    }
+
+    .marquee-container {
+        gap: 0rem !important;
+        margin: 1.6rem 0 !important;
+    }
+
+    .hero-img {
+        max-width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+
+    .service-chip {
+        font-size: 0.8rem !important;
+        padding: 0.45rem 1.2rem !important;
+    }
+
+    .navbar-aura img {
+        height: 35px !important;
+    }
+
+    .hero-section {
+        padding: 5rem 0 3rem !important;
+    }
+
+    .btn-primary-aura,
+    .btn-outline-aura {
+        padding: 0.7rem 1.5rem !important;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.7rem !important;
+    }
+
+    .about-img {
+        max-width: 260px !important;
+    }
+
+    .section-paragraph {
+        font-size: 0.95rem !important;
+    }
+
+    .sub-section-title {
+        font-size: 1.3rem;
+    }
+
+    .section-subtitle {
+        margin-bottom: 2.5rem !important;
+    }
+
+    .swiper-container {
+        padding-top: 1rem !important;
+    }
+
+    .section-title {
+        margin-bottom: 0.5rem;
+    }
+
+    .service-title {
+        font-size: 1.25rem !important;
+    }
+
+    .service-feature-list li {
+        font-size: 0.85rem !important;
+    }
+
+    .service-feature-list {
+        margin: 25px 0;
+    }
+
+    .service-btn {
+        padding: 0.6rem 1.4rem !important;
+    }
+
+    .swiper-pagination {
+        bottom: 0px !important;
+    }
+
+    .project-card,
+    .uc-project-card {
+        max-width: 100% !important;
+        margin: 30px 0;
+    }
+
+    .project-title-area h5 {
+        font-size: 1.15rem;
+    }
+
+    .project-title-area .badge {
+        font-size: 0.75rem !important;
+    }
+
+    .project-card_description,
+    .uc-project-card-desc {
+        font-size: 0.9rem;
+    }
+
+    .project-card-content {
+        padding: 1.2rem 1rem;
+    }
+
+    .project-card img {
+        height: 230px !important;
+    }
+
+    .uc-project-card-img-area img {
+        height: 210px !important;
+    }
+
+    .project-card-row,
+    .uc-project-card-row {
+        row-gap: 0px !important;
+    }
+
+    .uc-project-card-title-area h5 {
+        font-size: 1rem;
+        white-space: initial;
+        line-height: 1.4em;
+    }
+
+    .uc-project-card-desc {
+        height: auto !important;
+    }
+
+    .contact-info-card small {
+        font-size: 0.78rem;
+    }
+
+    .contact-info-card a {
+        font-size: 0.88rem;
+    }
+
+    .contact-illustration {
+        max-height: 300px !important;
+    }
+
+    .contact-info-card {
+        margin-bottom: 2rem !important;
+    }
+
+    .contact-form {
+        padding: 2rem 1.3rem !important;
+    }
+
+    .contact-form-head {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .contact-form-para {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+
+    .send-btn {
+        max-width: 100% !important;
+        width: 100% !important;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .contact-form .form-control {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .terms-policy-section {
+        padding-top: 130px !important;
+    }
+
+    .terms-policy-section p,
+    .terms-policy-section li {
+        font-size: 0.9rem;
+    }
+
+    .terms-policy-section h3 {
+        font-size: 0.95rem;
+    }
+
+    .terms-policy-section .glass-card {
+        border-radius: 1.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .footer-col-title {
+        font-size: 1rem;
+    }
+
+    .footer-links a,
+    .footer-link-btn {
+        font-size: 0.9rem;
+    }
+
+    .footer-contact p:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
+
+    .footer-brand-section {
+        padding: 4rem 0 1rem;
+    }
+
+    .footer-brand-section::before {
+        background: radial-gradient(circle at 50% 50%, rgba(67, 193, 206, 0.05) 0%, transparent 70%);
+    }
+
+    .footer {
+        background: radial-gradient(125% 125% at 50% -10%, #43c1ce26 0%, rgba(15, 15, 35, 0.9) 60%);
+    }
+
+    .footer-brand-title {
+        font-weight: 800;
+    }
+
+    .service-section {
+        padding-top: 140px !important;
+    }
+
+    .project-detail-section {
+        padding-top: 140px !important;
+    }
+
+    .service-head {
+        font-size: 1.6rem
+    }
+
+    .service-description {
+        font-size: 0.95rem !important;
+    }
+
+    .service-feaure-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .feature-title {
+        font-size: 0.95rem;
+    }
+
+    .service-feaure-card {
+        border-radius: 1.5rem;
+        padding: 2rem 1.4rem !important;
+    }
+
+    .service-feaure-card i {
+        margin-top: -4px;
+        font-size: 1.15rem !important;
+    }
+
+    .service-det-icon-area i {
+        font-size: 3.8rem !important;
+    }
+
+    .feature-description {
+        font-size: 0.88rem !important;
+    }
+
+    .project-details-card {
+        border-radius: 0 0 1.5rem 1.5rem;
+        padding: 2rem 1.4rem !important;
+    }
+
+    .project-detail-main-img {
+        border-radius: 1.5rem 1.5rem 0 0 !important;
+        border-bottom: none;
+        border-color: rgba(94, 234, 212, 0.5);
+    }
+
+    .project-details-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .project-details-card p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .project-detail-header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .project-logo {
+        width: 150px !important;
+        height: 150px !important;
+        border-radius: 1.5rem;
+    }
+
+    .project-detail-head {
+        font-size: 1.3rem !important;
+    }
+
+    .project-detail-sub .badge {
+        font-size: 0.8rem;
+    }
+
+    .project-detail-area {
+        position: relative !important;
+        transform: none !important;
+        left: auto !important;
+        width: 100% !important;
+        background-color: transparent !important;
+        padding: 0 !important;
+        margin-bottom: 30px;
+    }
+
+    .project-detail-area .btn-primary-aura {
+        margin: 25px auto 0 !important;
+        display: flex;
+        padding: 0.6rem 1.4rem !important;
+    }
+}
+
+/* For Custom */
+@media (max-width: 991.8px) {
+    .hero-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-section {
+        padding: 6rem 0 3rem;
+    }
+
+    .marquee-container {
+        gap: 0.5rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .section-paragraph {
+        font-size: 1rem;
+    }
+
+    .about-section .section-paragraph {
+        text-align-last: center;
+    }
+
+    .team-card-inner:hover {
+        transform: none;
+    }
+
+    .swiper-nav-btn {
+        display: none;
+    }
+
+    .service-title {
+        font-size: 1.3rem;
+    }
+
+    .service-feature-list li {
+        font-size: 0.9rem;
+    }
+
+    .service-icon-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .glass-card:hover {
+        transform: none;
+    }
+
+    .project-card {
+        height: auto;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project-card:last-child,
+    .uc-project-card:last-child {
+        margin-bottom: 0;
+    }
+
+    .uc-project-card {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .uc-project-card-desc {
+        height: 100px;
+    }
+
+    .uc-project-card-img-area img {
+        height: 250px;
+    }
+
+    .project-card-row,
+    .uc-project-card-row {
+        row-gap: 20px;
+    }
+
+    .contact-info-card {
+        margin-bottom: 3rem;
+    }
+
+    .hero-section::before {
+        background: radial-gradient(125% 125% at 50% 90%, transparent 50%, #43c1ce);
+    }
+
+    .terms-policy-section {
+        padding-top: 150px;
+    }
+
+    .footer-content {
+        row-gap: 3rem;
+    }
+
+    .footer-brand-section::before {
+        transform: translateY(-50%);
+    }
+
+    .service-section {
+        padding-top: 150px;
+    }
+
+    .project-card_description {
+        height: auto;
+    }
+
+    .project-detail-section {
+        padding-top: 150px;
+    }
+
+    .project-detail-area {
+        position: absolute;
+        background-color: rgba(25, 32, 60, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: 30px;
+        width: calc(100% - 20px);
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: 10px;
+    }
+
+    .project-detail-header {
+        margin-bottom: 0;
+    }
+
+    .project-logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .project-detail-head {
+        font-size: 1.7rem;
+    }
+
+    .project-detail-area .btn-primary-aura {
+        margin-top: 15px;
+    }
+}
