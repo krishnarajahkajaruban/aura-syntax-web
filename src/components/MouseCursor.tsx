@@ -18,6 +18,7 @@ const MouseCursor = () => {
       mouseX = e.clientX;
       mouseY = e.clientY;
       
+      // Update dot position instantly
       dot.style.left = `${mouseX}px`;
       dot.style.top = `${mouseY}px`;
     };

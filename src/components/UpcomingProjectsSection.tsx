@@ -1,5 +1,6 @@
 import { Fade } from 'react-awesome-reveal';
 import { upcomingProjects } from '@/data/mockData';
+import { toast } from 'sonner';
 import '../styles/custom.css';
 
 interface UpcomingProjectsProps {
