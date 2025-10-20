@@ -1,5 +1,6 @@
 <img width="371" height="100" alt="logo-sm" src="https://github.com/user-attachments/assets/a046848d-06fb-4b8e-b949-0eaf0d36e5eb" />
 
+
 Craft the Logic. Build What’s Next.
 
 AuraSyntax is a forward-thinking software company where creativity meets precision.

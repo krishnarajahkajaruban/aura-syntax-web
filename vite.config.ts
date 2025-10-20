@@ -19,7 +19,7 @@ export default defineConfig({
         short_name: "AuraSyntax",
         description: "AuraSyntax — Craft the Logic. Build What's Next.",
         theme_color: "#292f61",
-        background_color: "#FFF",
+        background_color: "#292f61",
         display: "standalone",
         start_url: "/",
         orientation: "portrait",
@@ -34,13 +34,7 @@ export default defineConfig({
             src: "pwa-512x512.png",
             sizes: "512x512",
             type: "image/png",
-          },
-          {
-            src: "pwa-maskable.png",
-            sizes: "512x512",
-            type: "image/png",
-            purpose: "maskable",
-          },
+          }
         ],
       },
       workbox: {

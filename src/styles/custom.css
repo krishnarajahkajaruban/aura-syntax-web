@@ -356,7 +356,8 @@ a:hover {
   justify-content: center;
 }
 
-.btn-outline-aura:disabled {
+.btn-outline-aura:disabled,
+.btn-primary-aura:disabled {
   pointer-events: none;
   opacity: 0.5;
 }
@@ -1861,6 +1862,18 @@ a:hover {
   box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.03);
   border-radius: 2rem;
   height: 80vh;
+}
+
+/* Toast */
+.p-toast .p-toast-message {
+  border-radius: 15px;
+}
+
+.p-toast .p-toast-message .p-toast-message-content .p-toast-detail {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
 }
 
 

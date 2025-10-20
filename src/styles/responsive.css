@@ -527,6 +527,26 @@
         display: flex;
         padding: 0.6rem 1.4rem !important;
     }
+
+    .p-toast .p-toast-message .p-toast-message-content .p-toast-summary {
+        font-size: 0.95rem;
+    }
+
+    .p-toast .p-toast-message .p-toast-message-content .p-toast-detail {
+        font-size: 0.85rem;
+        font-weight: 300;
+    }
+
+    .p-toast-message-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .p-toast.p-component {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 92vw;
+    }
 }
 
 /* For Custom */

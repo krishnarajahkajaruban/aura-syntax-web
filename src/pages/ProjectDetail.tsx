@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Fade } from 'react-awesome-reveal';
-import { Dialog } from 'primereact/dialog';
-import { Galleria } from 'primereact/galleria';
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import Navbar from '@/components/Navbar';

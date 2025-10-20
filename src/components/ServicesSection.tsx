@@ -68,7 +68,7 @@ const ServicesSection = () => {
               className="swiper-container"
             >
               {services.map((service) => (
-                <SwiperSlide key={service.id}>
+                <SwiperSlide key={`service.id-${service.id}`} className="service-slide">
                   <div
                     className="glass-card h-100"
                   >
@@ -89,7 +89,7 @@ const ServicesSection = () => {
 
                     <ul className='service-feature-list'>
                       {service?.serviceFeatures?.slice(0, 5)?.map((feature) => (
-                        <li>{feature?.feature}</li>
+                        <li key={`serviceFeatre-${feature?.id}`}>{feature?.feature}</li>
                       ))}
                     </ul>
 
