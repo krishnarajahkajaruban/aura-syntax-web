@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import { useNavigate } from 'react-router-dom';
@@ -9,7 +8,6 @@ import { heroIllustration } from '@/utils/appData';
 const HeroSection = () => {
   const navigate = useNavigate();
 
-  // Split services into two rows
   const firstRowServices = [...services, ...services];
   const secondRowServices = [...services.slice().reverse(), ...services.slice().reverse()];
 
@@ -103,7 +101,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
       <div className="scroll-indicator">
         <div className="mouse">
           <div className="mouse-wheel"></div>

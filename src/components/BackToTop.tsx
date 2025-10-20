@@ -24,7 +24,7 @@ const BackToTop = () => {
   const scrollToTop = () => {
     gsap.to(window, {
       scrollTo: { y: 0 },
-      duration: 0.4,
+      duration: 0.3,
       ease: 'power2.out'
     });
   };

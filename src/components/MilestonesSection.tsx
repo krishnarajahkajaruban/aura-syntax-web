@@ -14,7 +14,6 @@ const MilestonesSection = () => {
     if (!sectionRef.current || !timelineRef.current) return;
 
     const ctx = gsap.context(() => {
-      // Animate timeline items on scroll
       const timelineItems = document.querySelectorAll('.timeline-item');
       const isMobile = window.innerWidth < 991;
 
@@ -42,7 +41,6 @@ const MilestonesSection = () => {
         window.addEventListener('resize', () => ScrollTrigger.refresh());
       });
 
-      // Animate timeline line
       gsap.fromTo('.timeline-line',
         { scaleY: 0 },
         {
