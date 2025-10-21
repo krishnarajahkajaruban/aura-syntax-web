@@ -1,4 +1,4 @@
-export const contactIllustration = './assets/contact-illustration.png';
-export const logoPortrait = '/assets/logo-portrait.png';
-export const heroIllustration = '/assets/hero-illustration.png';
-export const logo = '/assets/logo.png';
+export const contactIllustration = './assets/contact-illustration.webp';
+export const logoPortrait = '/assets/logo-portrait.webp';
+export const heroIllustration = '/assets/hero-illustration.webp';
+export const logo = '/assets/logo.webp';

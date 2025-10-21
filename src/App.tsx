@@ -12,11 +12,14 @@ import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 import './styles/custom.css';
 import './styles/responsive.css';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <BrowserRouter>
+    <SpeedInsights />
+
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <MouseCursor />

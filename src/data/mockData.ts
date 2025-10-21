@@ -249,7 +249,7 @@ export const projects: Project[] = [
     id: 2,
     name: "Kover Drive",
     image: "/assets/projects/kover-drive/cover.webp",
-    companyLogo: "/assets/projects/kover-drive/logo.png",
+    companyLogo: "/assets/projects/kover-drive/logo.webp",
     projectType: "Sports Lane Management System",
     projectDescriptions: [
       {
@@ -286,13 +286,13 @@ export const projects: Project[] = [
     hasPreview: true,
     previewLink: 'https://koverdrivesports.ca/',
     projectSnapShots: [
-      { id: 7, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-1.png" },
-      { id: 8, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-2.png" },
-      { id: 9, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-3.png" },
-      { id: 10, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-4.png" },
+      { id: 7, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-1.webp" },
+      { id: 8, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-2.webp" },
+      { id: 9, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-3.webp" },
+      { id: 10, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-4.webp" },
       { id: 11, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-5.png" },
       { id: 12, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-6.png" },
-      { id: 13, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-7.png" }
+      { id: 13, projectId: 2, imagePath: "/assets/projects/kover-drive/snap-7.webp" }
     ],
     status: true
   },
