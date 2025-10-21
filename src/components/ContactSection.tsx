@@ -5,6 +5,7 @@ import '../styles/custom.css';
 import { Link } from 'react-router-dom';
 import { contactIllustration } from '@/utils/appData';
 import { Toast } from "primereact/toast";
+import axios, { AxiosError } from "axios";
 
 const contactSchema = z.object({
   firstName: z.string()
@@ -37,6 +38,13 @@ const contactSchema = z.object({
     .trim()
     .min(10, 'Message must be at least 10 characters')
     .max(2000, 'Message must be less than 2000 characters')
+});
+
+const api = axios.create({
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'https://singai-pos-management-backend.onrender.com/api/v1',
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
 interface ContactFormProps {
@@ -82,38 +90,49 @@ const ContactSection: React.FC<ContactFormProps> = ({
         message: validatedData.message.trim()
       };
 
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const response = await api.post("/auth", sanitizedData);
 
-      setFormData({
-        firstName: "",
-        lastName: "",
-        contact: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
+      if (response.status === 200 || response.status === 201) {
+        setFormData({
+          firstName: "",
+          lastName: "",
+          contact: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
 
-      toast?.current?.show({
-        severity: "success",
-        summary: "Message Sent",
-        detail: "Your message has been sent successfully! We’ll get back to you soon.",
-        life: 3000,
-      });
-
+        toast?.current?.show({
+          severity: "success",
+          summary: "Message Sent",
+          detail: "Your message has been sent successfully! We’ll get back to you soon.",
+          life: 3000,
+        });
+      }
     } catch (error) {
       if (error instanceof z.ZodError) {
-        toast?.current?.show({
+        toast.current?.show({
           severity: "warn",
           summary: "Validation Error",
           detail: error.errors[0].message,
           life: 3000,
         });
-      } else {
-        toast?.current?.show({
+      }
+      else if (axios.isAxiosError(error)) {
+        const axiosError = error as AxiosError<{ message?: string }>;
+        toast.current?.show({
           severity: "error",
           summary: "Submission Failed",
-          detail: "Something went wrong. Please try again later.",
-          life: 3000,
+          detail: axiosError.response?.data?.message || "Something went wrong. Please try again later.",
+          life: 4000,
+        });
+      }
+      else {
+        toast.current?.show({
+          severity: "error",
+          summary: "Unexpected Error",
+          detail: "An unexpected error occurred. Please try again.",
+          life: 4000,
         });
       }
     } finally {

@@ -5,6 +5,9 @@ const MouseCursor = () => {
   const cursorOutlineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Skip if device is touch-based
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+
     const dot = cursorDotRef.current;
     const outline = cursorOutlineRef.current;
     if (!dot || !outline) return;
@@ -17,8 +20,6 @@ const MouseCursor = () => {
     const handleMouseMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      
-      // Update dot position instantly
       dot.style.left = `${mouseX}px`;
       dot.style.top = `${mouseY}px`;
     };
@@ -30,9 +31,7 @@ const MouseCursor = () => {
       ripple.style.top = `${e.clientY}px`;
       document.body.appendChild(ripple);
 
-      setTimeout(() => {
-        ripple.remove();
-      }, 500);
+      setTimeout(() => ripple.remove(), 500);
     };
 
     const animateOutline = () => {
@@ -55,6 +54,10 @@ const MouseCursor = () => {
       document.removeEventListener('click', handleClick);
     };
   }, []);
+
+  // Hide cursor elements on touch devices
+  const isTouchDevice = typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches;
+  if (isTouchDevice) return null;
 
   return (
     <>

@@ -1957,3 +1957,12 @@ a:hover {
     font-size: 0.9rem;
   }
 }
+
+@media (pointer: coarse) {
+
+  .cursor-dot,
+  .cursor-outline,
+  .cursor-ripple {
+    display: none !important;
+  }
+}
