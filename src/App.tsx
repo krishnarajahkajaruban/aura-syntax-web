@@ -13,12 +13,14 @@ import NotFound from "./pages/NotFound";
 import './styles/custom.css';
 import './styles/responsive.css';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <BrowserRouter>
     <SpeedInsights />
+    <Analytics />
 
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
