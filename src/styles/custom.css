@@ -605,6 +605,7 @@ a:hover {
   line-height: 1.65em;
   color: #7995a3;
   height: 100px;
+  overflow: hidden;
 }
 
 .project-title-area h5 {

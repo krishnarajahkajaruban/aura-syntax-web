@@ -253,31 +253,31 @@ export const projects: Project[] = [
     projectType: "Sports Lane Management System",
     projectDescriptions: [
       {
-        id: 1,
+        id: 6,
         projectId: 2,
         description:
           "Kover Drive Sports is London’s premier indoor cricket and baseball facility designed to inspire athletes, promote fitness, and foster a strong sports community. With state-of-the-art lanes and advanced booking technology, it provides an immersive environment for both amateurs and professionals.",
       },
       {
-        id: 2,
+        id: 7,
         projectId: 2,
         description:
           "To enhance convenience and streamline operations, we developed a dynamic Sports Lane Management System that allows players to easily browse availability, book lanes online, and make secure payments directly through the platform.",
       },
       {
-        id: 3,
+        id: 8,
         projectId: 2,
         description:
           "The system offers a personalized player dashboard where users can manage bookings, track upcoming sessions, view past activity, and receive real-time updates — creating a smooth and transparent user experience.",
       },
       {
-        id: 4,
+        id: 9,
         projectId: 2,
         description:
           "For administrators, the platform provides a powerful management portal to oversee lane schedules, update promotions, manage memberships, and access detailed analytics and reports. It ensures efficient daily operations and helps maintain a high standard of customer satisfaction.",
       },
       {
-        id: 5,
+        id: 10,
         projectId: 2,
         description:
           "This web solution integrates modern UI/UX design with a responsive interface and secure backend functionality, making it an all-in-one platform for digital sports lane booking and management.",
@@ -304,37 +304,37 @@ export const projects: Project[] = [
     projectType: "Airport Parking Management System",
     projectDescriptions: [
       {
-        id: 1,
+        id: 11,
         projectId: 3,
         description:
           "The Parking Deals is an advanced airport parking management platform designed to simplify how travelers find, compare, and reserve parking across multiple airport locations in the UK. It provides users with a seamless online experience for booking secure and affordable parking solutions.",
       },
       {
-        id: 2,
+        id: 12,
         projectId: 3,
         description:
           "The platform connects customers with verified parking vendors offering diverse services such as valet parking, meet-and-greet options, and shuttle transfers — ensuring flexibility and convenience for every traveler’s need.",
       },
       {
-        id: 3,
+        id: 13,
         projectId: 3,
         description:
           "Customers can create accounts to manage their bookings through a personalized dashboard, where they can view upcoming reservations, edit personal details, download invoices, and access real-time updates about their parking schedules.",
       },
       {
-        id: 4,
+        id: 14,
         projectId: 3,
         description:
           "The admin panel provides a robust backend for managing customers, vendors, bookings, and promotional offers. It also allows administrators to oversee airport details, pricing structures, and performance analytics to optimize daily operations.",
       },
       {
-        id: 5,
+        id: 15,
         projectId: 3,
         description:
           "Built with a strong focus on security and scalability, the system restricts backend access to authorized admins and moderators only. With role-based permissions and secure data handling, it ensures business integrity and efficient management of high-volume transactions.",
       },
       {
-        id: 6,
+        id: 16,
         projectId: 3,
         description:
           "The Parking Deals delivers a complete digital ecosystem for airport parking — combining user convenience, vendor management, and operational control into a single, powerful web application.",
@@ -352,7 +352,65 @@ export const projects: Project[] = [
       { id: 20, projectId: 3, imagePath: "/assets/projects/parking-deals/snap-7.webp" }
     ],
     status: true
+  },
+  {
+    id: 4,
+    name: "Buildora Engineers",
+    image: "/assets/projects/buildora-engineers/cover.webp",
+    companyLogo: "/assets/projects/buildora-engineers/logo.webp",
+    projectType: "Engineering & Construction Website",
+    projectDescriptions: [
+      {
+        id: 17,
+        projectId: 4,
+        description:
+          "Buildora Engineers is a leading design and build company based in the Northern Province of Sri Lanka, delivering high-quality residential, commercial, and industrial construction solutions with unmatched precision and reliability."
+      },
+      {
+        id: 18,
+        projectId: 4,
+        description:
+          "The website showcases the company’s expertise through a modern digital portfolio featuring completed projects, service offerings, structural design capabilities, and engineering excellence built over more than a decade."
+      },
+      {
+        id: 19,
+        projectId: 4,
+        description:
+          "Visitors can explore detailed project categories, including architectural drafting, building construction, renovation services, structural engineering, and material estimation — all presented in an intuitive, visually appealing user interface."
+      },
+      {
+        id: 20,
+        projectId: 4,
+        description:
+          "The platform provides an efficient content management system for managing project galleries, client testimonials, service descriptions, and team information, enabling easy website updates by the Buildora team."
+      },
+      {
+        id: 21,
+        projectId: 4,
+        description:
+          "Built with a focus on performance and modern design, the system ensures fast loading, smooth navigation, and a mobile-friendly responsive layout optimized for all devices."
+      },
+      {
+        id: 22,
+        projectId: 4,
+        description:
+          "This project strengthens Buildora Engineers’ digital identity by offering a professional online presence that reflects their commitment to quality, innovation, and engineering excellence."
+      }
+    ],
+    hasPreview: true,
+    previewLink: "https://buildoraengineers.com/",
+    projectSnapShots: [
+      { id: 21, projectId: 4, imagePath: "/assets/projects/buildora-engineers/snap-1.webp" },
+      { id: 22, projectId: 4, imagePath: "/assets/projects/buildora-engineers/snap-2.webp" },
+      { id: 23, projectId: 4, imagePath: "/assets/projects/buildora-engineers/snap-3.webp" },
+      { id: 24, projectId: 4, imagePath: "/assets/projects/buildora-engineers/snap-4.webp" },
+      { id: 25, projectId: 4, imagePath: "/assets/projects/buildora-engineers/snap-5.webp" },
+      { id: 25, projectId: 4, imagePath: "/assets/projects/buildora-engineers/snap-6.webp" },
+      { id: 25, projectId: 4, imagePath: "/assets/projects/buildora-engineers/snap-7.webp" }
+    ],
+    status: true
   }
+
 ];
 
 
