@@ -17,12 +17,43 @@ export default defineConfig({
         drop_debugger: true,
       },
     },
+    chunkSizeWarningLimit: 600, // Increase limit to 600KB (gzipped is much smaller)
     rollupOptions: {
       output: {
-        manualChunks: {
+        manualChunks: (id) => {
           // Split vendor chunks for better caching
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'gsap-vendor': ['gsap'],
+          if (id.includes('node_modules')) {
+            // React ecosystem
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+              return 'react-vendor';
+            }
+            // GSAP and animations
+            if (id.includes('gsap') || id.includes('framer-motion') || id.includes('react-awesome-reveal')) {
+              return 'animation-vendor';
+            }
+            // LightGallery (heavy, only used in ProjectDetail)
+            if (id.includes('lightgallery') || id.includes('lg-')) {
+              return 'gallery-vendor';
+            }
+            // PrimeReact (heavy, only used in ProjectDetail)
+            if (id.includes('primereact')) {
+              return 'primereact-vendor';
+            }
+            // UI libraries
+            if (id.includes('@radix-ui') || id.includes('lucide-react') || id.includes('sonner')) {
+              return 'ui-vendor';
+            }
+            // Form libraries
+            if (id.includes('react-hook-form') || id.includes('zod') || id.includes('@hookform')) {
+              return 'form-vendor';
+            }
+            // Other vendors
+            if (id.includes('swiper') || id.includes('bootstrap') || id.includes('axios')) {
+              return 'misc-vendor';
+            }
+            // All other node_modules
+            return 'vendor';
+          }
         },
       },
     },
