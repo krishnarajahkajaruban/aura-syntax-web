@@ -41,7 +41,10 @@ const ServicesSection = () => {
         <Fade direction="up" triggerOnce>
           <h2 className="section-title gradient-text">Our Services</h2>
           <p className="section-subtitle">
-            Comprehensive software solutions tailored to your needs
+            Comprehensive software solutions tailored to your needs. Explore our services including 
+            <a href="#services" className="text-decoration-none mx-1" style={{ color: '#43c1ce' }}>web development</a>,
+            <a href="#services" className="text-decoration-none mx-1" style={{ color: '#43c1ce' }}>mobile apps</a>,
+            <a href="#services" className="text-decoration-none mx-1" style={{ color: '#43c1ce' }}>AI & machine learning</a>, and more.
           </p>
         </Fade>
 
@@ -78,14 +81,18 @@ const ServicesSection = () => {
                       >
                         <img
                           src={service?.iconImg}
-                          alt={service?.serviceName}
+                          alt={`${service?.serviceName} service icon`}
                           className='img-fluid'
+                          loading="lazy"
+                          width="120"
+                          height="120"
+                          style={{ aspectRatio: '1/1' }}
                           draggable={false}
                         />
                       </div>
                     </div>
 
-                    <h4 className="service-title mb-3">{service.serviceName}</h4>
+                    <h3 className="service-title mb-3">{service.serviceName}</h3>
 
                     <ul className='service-feature-list'>
                       {service?.serviceFeatures?.slice(0, 5)?.map((feature) => (

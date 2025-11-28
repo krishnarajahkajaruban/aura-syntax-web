@@ -5,10 +5,17 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import '../styles/custom.css';
 import BackToTop from '@/components/BackToTop';
+import SEO from '@/components/SEO';
 
 const Privacy = () => {
   return (
     <React.Fragment>
+      <SEO
+        title="Privacy Policy | AuraSyntax"
+        description="AuraSyntax Privacy Policy. Learn how we collect, use, and protect your personal information. Your privacy is important to us."
+        keywords="AuraSyntax, privacy policy, data protection, GDPR, user privacy, information security"
+        canonicalUrl="https://aurasyntax.com/privacy"
+      />
       <Navbar />
 
       <section className="section terms-policy-section">

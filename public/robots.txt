@@ -12,3 +12,8 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://www.aurasyntax.com/sitemap.xml
+
+# LLMs.txt for AI crawlers
+# Visit: https://www.aurasyntax.com/llms.txt

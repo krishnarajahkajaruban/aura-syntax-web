@@ -1527,7 +1527,7 @@ a:hover {
 }
 
 .timeline-description {
-  font-size: 0.95rem;
+  font-size: 1rem; /* 12pt+ for accessibility */
   color: hsl(var(--muted-foreground));
   line-height: 1.7;
   margin: 0;
@@ -1558,6 +1558,7 @@ a:hover {
 
 .hero-paragraph {
   line-height: 1.6em;
+  font-size: 1rem; /* 12pt+ for accessibility */
 }
 
 .hero-img {

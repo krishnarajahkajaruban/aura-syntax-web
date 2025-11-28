@@ -91,25 +91,41 @@ const AboutSection = () => {
             <img
               ref={logoRef}
               src={logoPortrait}
-              alt="AuraSyntax Logo"
+              alt="AuraSyntax Logo - Where Logic Meets Imagination"
               className="img-fluid about-img"
-              style={{ maxWidth: '280px' }}
+              loading="lazy"
+              width="280"
+              height="400"
+              style={{ maxWidth: '280px', aspectRatio: '280/400', objectFit: 'contain' }}
               draggable={false}
             />
           </div>
           <div className="col-lg-8">
             <div ref={textRef}>
               <p className='section-paragraph' style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
-                At AuraSyntax, we're a team of engineers, designers, and problem-solvers
-                dedicated to building tomorrow's technology today. From artificial intelligence
+                At AuraSyntax, we&apos;re a team of engineers, designers, and problem-solvers
+                dedicated to building tomorrow&apos;s technology today. From artificial intelligence
                 and mobile innovation to cloud infrastructure, DevOps automation, and cutting-edge
                 cybersecurity — we take on the challenges that matter. Our mission is simple:
                 to merge creative aura with structured syntax and deliver software that inspires.
               </p>
-              <p className='section-paragraph' style={{ color: 'var(--text-secondary)' }}>
-                We believe great software starts with bold ideas. Whether you're building a disruptive
+              <p className='section-paragraph' style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
+                We believe great software starts with bold ideas. Whether you&apos;re building a disruptive
                 startup, modernizing enterprise systems, or exploring the future of intelligent applications,
-                we're here to bring the vision to life.
+                we&apos;re here to bring the vision to life. Our comprehensive suite of services covers the entire
+                software development lifecycle, from initial concept and design through development, testing,
+                deployment, and ongoing maintenance.
+              </p>
+              <p className='section-paragraph' style={{ color: 'var(--text-secondary)' }}>
+                With expertise spanning across multiple technologies and platforms including{' '}
+                <a href="https://react.dev" target="_blank" rel="noopener noreferrer" className="text-decoration-none" style={{ color: '#43c1ce' }}>React</a>,{' '}
+                <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer" className="text-decoration-none" style={{ color: '#43c1ce' }}>Node.js</a>,{' '}
+                <a href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer" className="text-decoration-none" style={{ color: '#43c1ce' }}>AWS Cloud</a>, and{' '}
+                <a href="https://kubernetes.io" target="_blank" rel="noopener noreferrer" className="text-decoration-none" style={{ color: '#43c1ce' }}>Kubernetes</a>, AuraSyntax has successfully
+                delivered projects across various industries including restaurant management systems, sports
+                facility booking platforms, airport parking management systems, and enterprise solutions.
+                We prioritize client collaboration, transparent communication, and agile methodologies to ensure
+                timely delivery of high-quality software solutions that exceed expectations.
               </p>
             </div>
           </div>
@@ -125,7 +141,7 @@ const AboutSection = () => {
                     <div className="team-icon-wrapper">
                       <i className={`bi ${team.icon} team-icon`}></i>
                     </div>
-                    <h5 className="team-role">{team.role}</h5>
+                    <h4 className="team-role">{team.role}</h4>
                     <div className="team-card-glow"></div>
                   </div>
                 </div>

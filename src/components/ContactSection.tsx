@@ -161,15 +161,18 @@ const ContactSection: React.FC<ContactFormProps> = ({
                     src={contactIllustration}
                     alt="Contact Us"
                     className="img-fluid contact-illustration"
-                    style={{ maxWidth: '340px' }}
+                    width="340"
+                    height="340"
+                    loading="lazy"
+                    style={{ maxWidth: '340px', aspectRatio: '1/1', objectFit: 'contain' }}
                     draggable={false}
                   />
                 </div>
 
                 <div className="glass-card contact-info-card">
-                  <h5 className="contact-info-head">
+                  <h3 className="contact-info-head">
                     Contact Information
-                  </h5>
+                  </h3>
 
                   <div className="contact-info-content">
                     <i className="bi bi-envelope-fill"></i>
@@ -185,9 +188,19 @@ const ContactSection: React.FC<ContactFormProps> = ({
                     <i className="bi bi-telephone-fill"></i>
                     <div>
                       <small className="mb-1">Phone</small>
-                      <Link to="tel:0740856341" className="text-decoration-none">
-                        074 085 6341
+                      <Link to="tel:+94740856341" className="text-decoration-none">
+                        +94 74 085 6341
                       </Link>
+                    </div>
+                  </div>
+
+                  <div className="contact-info-content">
+                    <i className="bi bi-geo-alt-fill"></i>
+                    <div>
+                      <small className="mb-1">Address</small>
+                      <address className="mb-0" style={{ fontStyle: 'normal' }}>
+                        Global - Remote Software Development Services
+                      </address>
                     </div>
                   </div>
 
@@ -210,7 +223,7 @@ const ContactSection: React.FC<ContactFormProps> = ({
                     <div>
                       <small className="mb-1">Facebook</small>
                       <Link
-                        to="https://www.facebook.com/share/16CgR3P1ii/"
+                        to="https://www.facebook.com/profile.php?id=100094623707325"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-decoration-none"
@@ -241,9 +254,9 @@ const ContactSection: React.FC<ContactFormProps> = ({
             <div className="col-lg-7">
               <Fade direction="right" triggerOnce>
                 <form onSubmit={handleSubmit} className="contact-form">
-                  <h5 className="contact-form-head">
-                    Let’s Connect
-                  </h5>
+                  <h3 className="contact-form-head">
+                    Let's Connect
+                  </h3>
 
                   <p className='contact-form-para'>
                     Have a question or project in mind? Fill out the form below, and we’ll get back to you soon!
@@ -279,11 +292,11 @@ const ContactSection: React.FC<ContactFormProps> = ({
                     </div>
 
                     <div className="col-md-6 mb-3">
-                      <label htmlFor="contact" className="form-label">Contact Number</label>
+                      <label htmlFor="contactNumber" className="form-label">Contact Number</label>
                       <input
                         type="tel"
                         className="form-control"
-                        id="contact"
+                        id="contactNumber"
                         value={formData.contact}
                         onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
                         placeholder='Enter your contact number'

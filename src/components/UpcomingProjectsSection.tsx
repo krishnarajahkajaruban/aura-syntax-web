@@ -27,14 +27,18 @@ const UpcomingProjectsSection: React.FC<UpcomingProjectsProps> = ({ onNotify }) 
                   <div className="uc-project-card-img-area">
                     <img
                       src={project.image}
-                      alt={project.projectName}
+                      alt={`${project.projectName} - Coming Soon`}
                       className="img-fluid"
+                      loading="lazy"
+                      width="600"
+                      height="230"
+                      style={{ aspectRatio: '600/230' }}
                       draggable={false}
                     />
                   </div>
 
                   <div className="uc-project-card-title-area">
-                    <h5 className="mb-0">{project.projectName}</h5>
+                    <h3 className="mb-0">{project.projectName}</h3>
                     <span
                       className="badge"
                       style={{

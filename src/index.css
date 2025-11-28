@@ -62,3 +62,14 @@
     @apply bg-background text-foreground font-sans;
   }
 }
+
+/* Font Display Optimization for Bootstrap Icons */
+@font-face {
+  font-family: 'bootstrap-icons';
+  font-display: swap;
+}
+
+/* Optimize all font loading */
+@font-face {
+  font-display: swap;
+}

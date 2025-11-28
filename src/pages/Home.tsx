@@ -12,6 +12,8 @@ import UpcomingProjectsSection from '@/components/UpcomingProjectsSection';
 import ContactSection from '@/components/ContactSection';
 import SmoothScroll from '@/components/SmoothScroll';
 import BackToTop from '@/components/BackToTop';
+import SEO from '@/components/SEO';
+import SEOContent from '@/components/SEOContent';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -67,10 +69,8 @@ const Home = () => {
       ease: 'power2.out'
     });
 
-    gsap.to(window, {
-      scrollBehavior: 'smooth',
-      ease: 'power2.inOut'
-    });
+    // Set smooth scroll behavior via CSS (GSAP doesn't support scrollBehavior property)
+    document.documentElement.style.scrollBehavior = 'smooth';
 
     const sections = document.querySelectorAll('.section');
     sections.forEach((section, index) => {
@@ -111,25 +111,34 @@ const Home = () => {
   return (
     <SmoothScroll>
       <React.Fragment>
+        <SEO
+          title="AuraSyntax - Software Development | Web & AI Solutions"
+          description="AuraSyntax provides expert software development, web development, mobile apps, AI, machine learning, blockchain, and cloud computing services. We build innovative, scalable systems that power what's next."
+          keywords="AuraSyntax, software development, web development, mobile apps, AI, machine learning, blockchain, cloud computing, DevOps, UI/UX design, e-commerce, system integration, IT consulting, custom software, web applications, mobile applications"
+          canonicalUrl="https://www.aurasyntax.com/"
+        />
+        <SEOContent />
         <Navbar />
 
-        <HeroSection />
+        <main>
+          <HeroSection />
 
-        <AboutSection />
+          <AboutSection />
 
-        <ServicesSection />
+          <ServicesSection />
 
-        <MilestonesSection />
+          <MilestonesSection />
 
-        <ProjectsSection />
+          <ProjectsSection />
 
-        <UpcomingProjectsSection onNotify={handleNotifyMe} />
+          <UpcomingProjectsSection onNotify={handleNotifyMe} />
 
-        <ContactSection
-          contactSectionRef={contactSectionRef}
-          firstNameRef={firstNameRef}
-          prefilledSubject={formData.subject}
-        />
+          <ContactSection
+            contactSectionRef={contactSectionRef}
+            firstNameRef={firstNameRef}
+            prefilledSubject={formData.subject}
+          />
+        </main>
 
         <Footer />
 

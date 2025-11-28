@@ -32,6 +32,14 @@ const HeroSection = () => {
                 At AuraSyntax, logic meets imagination.
               </p>
 
+              <p className="hero-paragraph mb-4" style={{ color: 'var(--text-secondary)', fontSize: '1rem' }}>
+                AuraSyntax is a leading software development company specializing in comprehensive digital solutions 
+                including web development, mobile applications, artificial intelligence and machine learning, blockchain 
+                technology, cloud computing, DevOps automation, UI/UX design, e-commerce platforms, system integration, 
+                IT consulting, data analytics, quality assurance, and cybersecurity services. Our expert team delivers 
+                scalable, innovative solutions that drive business growth and digital transformation.
+              </p>
+
               <div className="marquee-container">
                 <div className="marquee-row">
                   <div className="marquee-content">
@@ -96,6 +104,10 @@ const HeroSection = () => {
                 src={heroIllustration}
                 alt="Development Illustration"
                 className="img-fluid hero-img"
+                width="1200"
+                height="957"
+                fetchPriority="high"
+                style={{ aspectRatio: '1200/957' }}
                 draggable={false}
               />
             </motion.div>

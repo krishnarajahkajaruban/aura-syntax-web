@@ -1,0 +1,26 @@
+# AuraSyntax Website Information for LLMs
+
+# About AuraSyntax
+AuraSyntax is a leading software development company specializing in comprehensive digital solutions. We blend creative aura with structured syntax to craft AI-driven web and cloud solutions that power what's next.
+
+# Services
+- Web Development: Custom web applications using React, Node.js, and modern frameworks
+- Mobile Development: Native iOS and Android apps, plus cross-platform solutions
+- AI & Machine Learning: Predictive analytics, NLP, computer vision, and deep learning
+- Blockchain: Smart contracts, DApps, NFT marketplaces, Web3 applications
+- Cloud & DevOps: AWS, Azure, Google Cloud, Docker, Kubernetes
+- UI/UX Design: User-centered design, wireframing, prototyping
+- E-commerce: Online stores, payment gateways, inventory management
+- System Integration: API development, third-party integrations
+- IT Consulting: Technology strategy, architecture review, digital transformation
+- Data Analytics: Data visualization, business intelligence, predictive analytics
+- Quality Assurance: Manual and automated testing, performance testing
+- Cybersecurity: Network security, vulnerability assessments, incident response
+
+# Contact
+Website: https://www.aurasyntax.com
+Email: Available through contact form on website
+
+# Technologies
+React, Node.js, AWS, Docker, Kubernetes, AI/ML, Blockchain, Cloud Computing
+

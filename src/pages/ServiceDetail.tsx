@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import { services } from '@/data/mockData';
 import '../styles/custom.css';
 import BackToTop from '@/components/BackToTop';
+import SEO from '@/components/SEO';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -48,8 +49,16 @@ const ServiceDetail = () => {
     );
   }
 
+  const keywords = `AuraSyntax, ${service.serviceName}, software development, ${service.serviceFeatures.map(f => f.feature).join(', ')}, IT services, technology solutions`;
+
   return (
     <React.Fragment>
+      <SEO
+        title={`${service.serviceName} Services | AuraSyntax`}
+        description={`${service.description} ${service.serviceFeatures.slice(0, 2).map(f => f.feature).join(', ')} and more. Professional ${service.serviceName.toLowerCase()} solutions.`}
+        keywords={keywords}
+        canonicalUrl={`https://aurasyntax.com/services/${service.id}`}
+      />
       <Navbar />
 
       <section className="section service-section">

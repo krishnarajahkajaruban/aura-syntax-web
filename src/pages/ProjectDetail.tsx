@@ -10,6 +10,7 @@ import { projects } from '@/data/mockData';
 import 'primereact/resources/themes/lara-dark-cyan/theme.css';
 import '../styles/custom.css';
 import BackToTop from '@/components/BackToTop';
+import SEO from '@/components/SEO';
 
 import LightGallery from "lightgallery/react";
 
@@ -54,8 +55,18 @@ const ProjectDetail = () => {
     );
   }
 
+  const projectDescription = project.projectDescriptions[0]?.description?.split(' ').slice(0, 30).join(' ') || '';
+  const keywords = `AuraSyntax, ${project.name}, ${project.projectType}, software development, web development, project showcase, ${project.projectType.toLowerCase().replace(/\s+/g, ', ')}`;
+
   return (
     <React.Fragment>
+      <SEO
+        title={`${project.name} - ${project.projectType} | AuraSyntax`}
+        description={`${projectDescription}${projectDescription.length > 100 ? '...' : ''} Explore this ${project.projectType.toLowerCase()} project by AuraSyntax.`}
+        keywords={keywords}
+        image={`https://aurasyntax.com${project.image}`}
+        canonicalUrl={`https://aurasyntax.com/projects/${project.id}`}
+      />
       <Navbar />
 
       <section className="section project-detail-section">
@@ -69,7 +80,11 @@ const ProjectDetail = () => {
                       <div className="project-logo">
                         <img
                           src={project.companyLogo}
-                          alt={`${project.name} logo`}
+                          alt={`${project.name} company logo`}
+                          loading="eager"
+                          width="150"
+                          height="150"
+                          style={{ aspectRatio: '1/1', objectFit: 'contain' }}
                           draggable={false}
                         />
                       </div>
@@ -100,8 +115,12 @@ const ProjectDetail = () => {
               <div className="col-xl-6 col-lg-8 ms-auto">
                 <img
                   src={project.image}
-                  alt={project.name}
+                  alt={`${project.name} - ${project.projectType}`}
                   className="img-fluid project-detail-main-img"
+                  loading="eager"
+                  width="800"
+                  height="600"
+                  style={{ aspectRatio: '800/600' }}
                   draggable={false}
                 />
               </div>
@@ -140,8 +159,11 @@ const ProjectDetail = () => {
                     >
                       <img
                         src={snapshot.imagePath}
-                        alt={`${project.name} snapshot`}
+                        alt={`${project.name} snapshot ${index + 1}`}
                         className="img-fluid rounded"
+                        loading="lazy"
+                        width="800"
+                        height="600"
                         style={{
                           cursor: "pointer",
                           transition: "transform 0.3s ease",
@@ -149,6 +171,7 @@ const ProjectDetail = () => {
                           width: "100%",
                           height: "100%",
                           objectFit: "cover",
+                          aspectRatio: "800/600",
                         }}
                         onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
                         onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}

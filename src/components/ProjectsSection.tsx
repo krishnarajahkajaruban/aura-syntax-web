@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Fade } from 'react-awesome-reveal';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { projects } from '@/data/mockData';
@@ -39,7 +39,10 @@ const ProjectsSection = () => {
         <Fade direction="up" triggerOnce>
           <h2 className="section-title gradient-text">Our Projects</h2>
           <p className="section-subtitle">
-            Showcase of our innovative solutions and successful deliveries
+            Showcase of our innovative solutions and successful deliveries. Explore our portfolio of 
+            <Link to="/projects/1" className="text-decoration-none mx-1" style={{ color: '#43c1ce' }}>restaurant management systems</Link>,
+            <Link to="/projects/2" className="text-decoration-none mx-1" style={{ color: '#43c1ce' }}>sports booking platforms</Link>, and
+            <Link to="/projects/3" className="text-decoration-none mx-1" style={{ color: '#43c1ce' }}>parking management solutions</Link>.
           </p>
         </Fade>
 
@@ -56,11 +59,19 @@ const ProjectsSection = () => {
                   card.style.setProperty("--mouse-y", `${y}px`);
                 }}>
                 <div className="project-card-img-area">
-                  <img src={project.image} alt={project.name} draggable={false} />
+                  <img 
+                    src={project.image} 
+                    alt={`${project.name} - ${project.projectType}`}
+                    loading="lazy"
+                    width="600"
+                    height="250"
+                    style={{ aspectRatio: '600/250' }}
+                    draggable={false} 
+                  />
                 </div>
                 <div className="project-card-content">
                   <div className="project-title-area">
-                    <h5 className="mb-0">{project.name}</h5>
+                    <h3 className="mb-0">{project.name}</h3>
                     <span
                       className="badge"
                       style={{

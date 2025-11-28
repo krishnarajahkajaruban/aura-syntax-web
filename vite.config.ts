@@ -9,11 +9,32 @@ export default defineConfig({
     host: "::",
     port: 5173,
   },
+  build: {
+    minify: 'terser', // Use terser for better minification
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console.log in production
+        drop_debugger: true,
+      },
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Split vendor chunks for better caching
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'gsap-vendor': ['gsap'],
+        },
+      },
+    },
+  },
   plugins: [
     react(),
     VitePWA({
       registerType: "autoUpdate",
       injectRegister: "auto",
+      devOptions: {
+        enabled: false, // Disable PWA in development to avoid service worker errors
+      },
       manifest: {
         name: "AuraSyntax",
         short_name: "AuraSyntax",

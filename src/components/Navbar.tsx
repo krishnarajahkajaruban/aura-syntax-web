@@ -96,7 +96,9 @@ const Navbar = () => {
             <img
               src={logo}
               alt="AuraSyntax"
-              style={{ height: '40px' }}
+              width="178"
+              height="48"
+              style={{ height: '40px', aspectRatio: '178/48', objectFit: 'contain' }}
               draggable={false}
             />
           </Link>

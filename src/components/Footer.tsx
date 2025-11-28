@@ -35,22 +35,23 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-brand-section">
-        <h2 className="footer-brand-title">AuraSyntax</h2>
+        <h3 className="footer-brand-title">AuraSyntax</h3>
         <p className="footer-tagline">Craft the logic. Build what's next.</p>
       </div>
 
       <div className="container">
         <div className="row footer-content">
           <div className="col-12 col-sm-6 col-lg-4 col-xl-3 footer-col">
-            <h5 className="footer-col-title">Connect With Us</h5>
+            <h4 className="footer-col-title">Connect With Us</h4>
             <div className="footer-social">
               <Link
-                to="https://www.facebook.com/share/16CgR3P1ii/"
+                to="https://www.facebook.com/profile.php?id=100094623707325"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-link"
+                aria-label="Visit AuraSyntax on Facebook"
               >
-                <i className="bi bi-facebook"></i>
+                <i className="bi bi-facebook" aria-hidden="true"></i>
               </Link>
 
               <Link
@@ -58,8 +59,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-link"
+                aria-label="Visit AuraSyntax on Instagram"
               >
-                <i className="bi bi-instagram"></i>
+                <i className="bi bi-instagram" aria-hidden="true"></i>
               </Link>
 
               <Link
@@ -67,14 +69,15 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-link"
+                aria-label="Contact AuraSyntax on WhatsApp"
               >
-                <i className="bi bi-whatsapp"></i>
+                <i className="bi bi-whatsapp" aria-hidden="true"></i>
               </Link>
             </div>
           </div>
 
           <div className="col-12 col-sm-6 col-lg-4 col-xl-3 footer-col">
-            <h6 className="footer-col-title">Quick Links</h6>
+            <h4 className="footer-col-title">Quick Links</h4>
             <ul className="footer-links">
               <li>
                 <button
@@ -115,15 +118,16 @@ const Footer = () => {
           </div>
 
           <div className="col-12 col-sm-6 col-lg-4 col-xl-3 footer-col">
-            <h6 className="footer-col-title">Legal</h6>
+            <h4 className="footer-col-title">Legal</h4>
             <ul className="footer-links">
               <li><Link to="/terms" onClick={goToTop}>Terms & Conditions</Link></li>
               <li><Link to="/privacy" onClick={goToTop}>Privacy Policy</Link></li>
+              <li><Link to="/sitemap" onClick={goToTop}>Sitemap</Link></li>
             </ul>
           </div>
 
           <div className="col-12 col-sm-6 col-lg-4 col-xl-3 footer-col">
-            <h6 className="footer-col-title">Contact Info</h6>
+            <h4 className="footer-col-title">Contact Info</h4>
             <div className="footer-contact">
               <p>
                 <i className="bi bi-envelope"></i>
@@ -131,7 +135,11 @@ const Footer = () => {
               </p>
               <p>
                 <i className="bi bi-telephone"></i>
-                <Link to='tel:0740856341'>074 085 6341</Link>
+                <Link to='tel:+94740856341'>+94 74 085 6341</Link>
+              </p>
+              <p>
+                <i className="bi bi-geo-alt"></i>
+                <span>Global - Remote Software Development Services</span>
               </p>
             </div>
           </div>
