@@ -20,11 +20,14 @@ export default defineConfig({
     chunkSizeWarningLimit: 600, // Increase limit to 600KB (gzipped is much smaller)
     rollupOptions: {
       output: {
+        // Use a more conservative chunking strategy to avoid circular dependencies
         manualChunks: (id) => {
-          // Split vendor chunks for better caching
           if (id.includes('node_modules')) {
-            // React ecosystem - includes React-dependent UI libraries
-            // @radix-ui and sonner need React to be loaded first
+            // Strategy: Only split truly independent, heavy libraries
+            // Keep interdependent packages together to avoid initialization issues
+            
+            // 1. React ecosystem - keep ALL React dependencies together
+            // This includes React, React DOM, React Router, and ALL React-dependent packages
             if (
               id.includes('react') || 
               id.includes('react-dom') || 
@@ -33,35 +36,58 @@ export default defineConfig({
               id.includes('sonner') ||
               id.includes('@tanstack/react-query') ||
               id.includes('react-helmet-async') ||
-              id.includes('next-themes')
+              id.includes('next-themes') ||
+              id.includes('react-hook-form') ||
+              id.includes('@hookform') ||
+              id.includes('react-day-picker') ||
+              id.includes('react-parallax-tilt') ||
+              id.includes('react-resizable-panels') ||
+              id.includes('react-awesome-reveal') ||
+              id.includes('framer-motion') ||
+              id.includes('embla-carousel-react') ||
+              id.includes('recharts') ||
+              id.includes('lucide-react') ||
+              id.includes('react-icons') ||
+              id.includes('clsx') ||
+              id.includes('class-variance-authority') ||
+              id.includes('tailwind-merge') ||
+              id.includes('tailwindcss-animate') ||
+              id.includes('cmdk') ||
+              id.includes('input-otp') ||
+              id.includes('vaul') ||
+              id.includes('zod') ||
+              id.includes('date-fns')
             ) {
               return 'react-vendor';
             }
-            // GSAP and animations
-            if (id.includes('gsap') || id.includes('framer-motion') || id.includes('react-awesome-reveal')) {
-              return 'animation-vendor';
+            
+            // 2. GSAP (standalone, heavy animation library)
+            if (id.includes('gsap')) {
+              return 'gsap-vendor';
             }
-            // LightGallery (heavy, only used in ProjectDetail)
+            
+            // 3. LightGallery (heavy, only used in ProjectDetail, lazy loaded)
             if (id.includes('lightgallery') || id.includes('lg-')) {
               return 'gallery-vendor';
             }
-            // PrimeReact (heavy, only used in ProjectDetail)
+            
+            // 4. PrimeReact (heavy, only used in ProjectDetail, lazy loaded)
             if (id.includes('primereact')) {
               return 'primereact-vendor';
             }
-            // UI libraries - split standalone ones
-            if (id.includes('lucide-react')) {
-              return 'icons-vendor';
+            
+            // 5. Bootstrap ecosystem (independent)
+            if (id.includes('bootstrap')) {
+              return 'bootstrap-vendor';
             }
-            // Form libraries
-            if (id.includes('react-hook-form') || id.includes('zod') || id.includes('@hookform')) {
-              return 'form-vendor';
+            
+            // 6. Swiper (independent carousel library)
+            if (id.includes('swiper')) {
+              return 'swiper-vendor';
             }
-            // Other vendors
-            if (id.includes('swiper') || id.includes('bootstrap') || id.includes('axios')) {
-              return 'misc-vendor';
-            }
-            // All other node_modules
+            
+            // 7. All other packages stay together to avoid circular dependencies
+            // This includes axios, @emotion/react, remixicon, and other utilities
             return 'vendor';
           }
         },
