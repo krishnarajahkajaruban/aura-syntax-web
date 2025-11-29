@@ -30,7 +30,7 @@
       ]
     },
     {
-      "source": "/assets/(.*\\.(jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|eot))",
+      "source": "/assets/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -80,4 +80,3 @@
     }
   ]
 }
-
