@@ -100,7 +100,7 @@ const HeroSection = () => {
                 className="img-fluid hero-img"
                 width="1200"
                 height="957"
-                fetchPriority="high"
+                fetchpriority="high"
                 style={{ aspectRatio: '1200/957' }}
                 draggable={false}
               />

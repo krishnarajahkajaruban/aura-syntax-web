@@ -8,9 +8,9 @@
   <meta name="theme-color" content="#222a4d" />
   
   <!-- Security Headers (meta tags as fallback, but server headers are preferred) -->
+  <!-- Note: X-Frame-Options must be set via HTTP headers, not meta tags -->
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-  <!-- <meta http-equiv="X-Frame-Options" content="DENY" /> -->
 
   <title>AuraSyntax - Software Development | Web & AI Solutions</title>
   <meta name="description"
@@ -31,6 +31,7 @@
 
   <!-- ✅ PWA Configuration -->
   <link rel="manifest" href="/manifest.json" />
+  <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="AuraSyntax" />

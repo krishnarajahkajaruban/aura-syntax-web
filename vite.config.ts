@@ -39,10 +39,13 @@ export default defineConfig({
             if (id.includes('primereact')) {
               return 'primereact-vendor';
             }
-            // UI libraries
-            if (id.includes('@radix-ui') || id.includes('lucide-react') || id.includes('sonner')) {
-              return 'ui-vendor';
+            // UI libraries - keep all together to avoid circular dependencies
+            // sonner depends on @radix-ui, so keep them together
+            // Only split lucide-react separately as it's standalone
+            if (id.includes('lucide-react')) {
+              return 'icons-vendor';
             }
+            // Keep @radix-ui and sonner in vendor chunk to avoid circular deps
             // Form libraries
             if (id.includes('react-hook-form') || id.includes('zod') || id.includes('@hookform')) {
               return 'form-vendor';
