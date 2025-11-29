@@ -10,6 +10,7 @@ const Navbar = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>('');
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleToggleMenu = () => {
     setIsOpen(!isOpen);
@@ -59,7 +60,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScrollToSection = () => {
       const sections = ['home', 'about', 'services', 'contact'];
       let current = activeSection;
 
@@ -79,13 +80,23 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScrollToSection);
+    handleScrollToSection();
+    return () => window.removeEventListener('scroll', handleScrollToSection);
   }, [activeSection]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar-aura" style={{ zIndex: 1000 }}>
+    <nav className={`navbar-aura ${isScrolled ? 'scrolled' : ''}`} style={{ zIndex: 1000 }}>
       <div className="container">
         <div className="d-flex justify-content-between align-items-center">
           <Link

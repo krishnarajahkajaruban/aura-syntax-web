@@ -27,17 +27,11 @@ const HeroSection = () => {
               </h1>
 
               <p className="hero-paragraph mb-4" style={{ color: 'var(--text-secondary)' }}>
-                We blend creative aura with structured syntax to develop modern software
-                experiences — from AI and mobile apps to cloud, DevOps, and cybersecurity.
-                At AuraSyntax, logic meets imagination.
+                We craft modern digital experiences where creativity meets engineering. From AI and mobile apps to cloud, DevOps, and cybersecurity, AuraSyntax builds technology that inspires and performs.
               </p>
 
               <p className="hero-paragraph mb-4" style={{ color: 'var(--text-secondary)', fontSize: '1rem' }}>
-                AuraSyntax is a leading software development company specializing in comprehensive digital solutions 
-                including web development, mobile applications, artificial intelligence and machine learning, blockchain 
-                technology, cloud computing, DevOps automation, UI/UX design, e-commerce platforms, system integration, 
-                IT consulting, data analytics, quality assurance, and cybersecurity services. Our expert team delivers 
-                scalable, innovative solutions that drive business growth and digital transformation.
+                AuraSyntax is a full-stack software development company delivering web and mobile apps, AI/ML solutions, blockchain systems, cloud infrastructure, UI/UX design, e-commerce platforms, and cybersecurity services. We create scalable, high-impact solutions that accelerate business growth and digital transformation.
               </p>
 
               <div className="marquee-container">

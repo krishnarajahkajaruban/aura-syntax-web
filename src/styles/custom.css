@@ -277,6 +277,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+  row-gap: 0rem;
 }
 
 .marquee-row {
@@ -1229,13 +1230,19 @@ a:hover {
   -webkit-backdrop-filter: blur(30px);
   border: 2px solid rgba(67, 193, 206, 0.25);
   border-radius: 1rem;
-  padding: 1.25rem 2rem;
+  padding: 1.2rem 2rem;
   transition: all 0.3s ease;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
+.navbar-aura.scrolled {
+  border-radius: 0 0 1rem 1rem;
+  top: 0;
+  border-top-color: transparent;
+}
+
 .navbar-aura img {
-  height: 48px !important;
+  height: 45px !important;
 }
 
 .nav-cta-btn {
@@ -1320,7 +1327,7 @@ a:hover {
   border: none;
   color: var(--text-secondary);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: color 0.3s ease;
   padding: 0.5rem 0;
@@ -1527,7 +1534,8 @@ a:hover {
 }
 
 .timeline-description {
-  font-size: 1rem; /* 12pt+ for accessibility */
+  font-size: 1rem;
+  /* 12pt+ for accessibility */
   color: hsl(var(--muted-foreground));
   line-height: 1.7;
   margin: 0;
@@ -1558,7 +1566,8 @@ a:hover {
 
 .hero-paragraph {
   line-height: 1.6em;
-  font-size: 1rem; /* 12pt+ for accessibility */
+  font-size: 1rem;
+  /* 12pt+ for accessibility */
 }
 
 .hero-img {
