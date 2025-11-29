@@ -23,8 +23,18 @@ export default defineConfig({
         manualChunks: (id) => {
           // Split vendor chunks for better caching
           if (id.includes('node_modules')) {
-            // React ecosystem
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+            // React ecosystem - includes React-dependent UI libraries
+            // @radix-ui and sonner need React to be loaded first
+            if (
+              id.includes('react') || 
+              id.includes('react-dom') || 
+              id.includes('react-router') ||
+              id.includes('@radix-ui') ||
+              id.includes('sonner') ||
+              id.includes('@tanstack/react-query') ||
+              id.includes('react-helmet-async') ||
+              id.includes('next-themes')
+            ) {
               return 'react-vendor';
             }
             // GSAP and animations
@@ -39,13 +49,10 @@ export default defineConfig({
             if (id.includes('primereact')) {
               return 'primereact-vendor';
             }
-            // UI libraries - keep all together to avoid circular dependencies
-            // sonner depends on @radix-ui, so keep them together
-            // Only split lucide-react separately as it's standalone
+            // UI libraries - split standalone ones
             if (id.includes('lucide-react')) {
               return 'icons-vendor';
             }
-            // Keep @radix-ui and sonner in vendor chunk to avoid circular deps
             // Form libraries
             if (id.includes('react-hook-form') || id.includes('zod') || id.includes('@hookform')) {
               return 'form-vendor';
