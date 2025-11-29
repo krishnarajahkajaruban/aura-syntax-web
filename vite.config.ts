@@ -21,76 +21,76 @@ export default defineConfig({
     rollupOptions: {
       output: {
         // Use a more conservative chunking strategy to avoid circular dependencies
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            // Strategy: Only split truly independent, heavy libraries
-            // Keep interdependent packages together to avoid initialization issues
+        // manualChunks: (id) => {
+        //   if (id.includes('node_modules')) {
+        //     // Strategy: Only split truly independent, heavy libraries
+        //     // Keep interdependent packages together to avoid initialization issues
             
-            // 1. React ecosystem - keep ALL React dependencies together
-            // This includes React, React DOM, React Router, and ALL React-dependent packages
-            if (
-              id.includes('react') || 
-              id.includes('react-dom') || 
-              id.includes('react-router') ||
-              id.includes('@radix-ui') ||
-              id.includes('sonner') ||
-              id.includes('@tanstack/react-query') ||
-              id.includes('react-helmet-async') ||
-              id.includes('next-themes') ||
-              id.includes('react-hook-form') ||
-              id.includes('@hookform') ||
-              id.includes('react-day-picker') ||
-              id.includes('react-parallax-tilt') ||
-              id.includes('react-resizable-panels') ||
-              id.includes('react-awesome-reveal') ||
-              id.includes('framer-motion') ||
-              id.includes('embla-carousel-react') ||
-              id.includes('recharts') ||
-              id.includes('lucide-react') ||
-              id.includes('react-icons') ||
-              id.includes('clsx') ||
-              id.includes('class-variance-authority') ||
-              id.includes('tailwind-merge') ||
-              id.includes('tailwindcss-animate') ||
-              id.includes('cmdk') ||
-              id.includes('input-otp') ||
-              id.includes('vaul') ||
-              id.includes('zod') ||
-              id.includes('date-fns')
-            ) {
-              return 'react-vendor';
-            }
+        //     // 1. React ecosystem - keep ALL React dependencies together
+        //     // This includes React, React DOM, React Router, and ALL React-dependent packages
+        //     if (
+        //       id.includes('react') || 
+        //       id.includes('react-dom') || 
+        //       id.includes('react-router') ||
+        //       id.includes('@radix-ui') ||
+        //       id.includes('sonner') ||
+        //       id.includes('@tanstack/react-query') ||
+        //       id.includes('react-helmet-async') ||
+        //       id.includes('next-themes') ||
+        //       id.includes('react-hook-form') ||
+        //       id.includes('@hookform') ||
+        //       id.includes('react-day-picker') ||
+        //       id.includes('react-parallax-tilt') ||
+        //       id.includes('react-resizable-panels') ||
+        //       id.includes('react-awesome-reveal') ||
+        //       id.includes('framer-motion') ||
+        //       id.includes('embla-carousel-react') ||
+        //       id.includes('recharts') ||
+        //       id.includes('lucide-react') ||
+        //       id.includes('react-icons') ||
+        //       id.includes('clsx') ||
+        //       id.includes('class-variance-authority') ||
+        //       id.includes('tailwind-merge') ||
+        //       id.includes('tailwindcss-animate') ||
+        //       id.includes('cmdk') ||
+        //       id.includes('input-otp') ||
+        //       id.includes('vaul') ||
+        //       id.includes('zod') ||
+        //       id.includes('date-fns')
+        //     ) {
+        //       return 'react-vendor';
+        //     }
             
-            // 2. GSAP (standalone, heavy animation library)
-            if (id.includes('gsap')) {
-              return 'gsap-vendor';
-            }
+        //     // 2. GSAP (standalone, heavy animation library)
+        //     if (id.includes('gsap')) {
+        //       return 'gsap-vendor';
+        //     }
             
-            // 3. LightGallery (heavy, only used in ProjectDetail, lazy loaded)
-            if (id.includes('lightgallery') || id.includes('lg-')) {
-              return 'gallery-vendor';
-            }
+        //     // 3. LightGallery (heavy, only used in ProjectDetail, lazy loaded)
+        //     if (id.includes('lightgallery') || id.includes('lg-')) {
+        //       return 'gallery-vendor';
+        //     }
             
-            // 4. PrimeReact (heavy, only used in ProjectDetail, lazy loaded)
-            if (id.includes('primereact')) {
-              return 'primereact-vendor';
-            }
+        //     // 4. PrimeReact (heavy, only used in ProjectDetail, lazy loaded)
+        //     if (id.includes('primereact')) {
+        //       return 'primereact-vendor';
+        //     }
             
-            // 5. Bootstrap ecosystem (independent)
-            if (id.includes('bootstrap')) {
-              return 'bootstrap-vendor';
-            }
+        //     // 5. Bootstrap ecosystem (independent)
+        //     if (id.includes('bootstrap')) {
+        //       return 'bootstrap-vendor';
+        //     }
             
-            // 6. Swiper (independent carousel library)
-            if (id.includes('swiper')) {
-              return 'swiper-vendor';
-            }
+        //     // 6. Swiper (independent carousel library)
+        //     if (id.includes('swiper')) {
+        //       return 'swiper-vendor';
+        //     }
             
-            // 7. All other packages stay together to avoid circular dependencies
-            // This includes axios, @emotion/react, remixicon, and other utilities
-            return 'vendor';
-          }
-        },
+        //     // 7. All other packages stay together to avoid circular dependencies
+        //     // This includes axios, @emotion/react, remixicon, and other utilities
+        //     return 'vendor';
+        //   }
+        // },
       },
     },
   },
