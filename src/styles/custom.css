@@ -1236,9 +1236,9 @@ a:hover {
 }
 
 .navbar-aura.scrolled {
-  border-radius: 0 0 1rem 1rem;
-  top: 0;
-  border-top-color: transparent;
+  border-radius: 0 0 1rem 1rem !important;
+  top: 0 !important;
+  border-top-color: transparent !important;
 }
 
 .navbar-aura img {
