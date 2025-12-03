@@ -6,10 +6,11 @@
 const SEOContent = () => {
   return (
     <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
-      <h2>AuraSyntax - Craft the Logic. Build What&apos;s Next.</h2>
+      <h1>AuraSyntax</h1>
+      <h2>Software Development Company - Craft the Logic. Build What&apos;s Next.</h2>
       
       <p>
-        AuraSyntax is a leading software development company specializing in crafting innovative digital solutions 
+        <strong>AuraSyntax</strong> is a leading software development company specializing in crafting innovative digital solutions 
         that combine creative design with robust technical implementation. We offer comprehensive software development 
         services including web development, mobile application development, artificial intelligence and machine learning 
         solutions, blockchain technology, cloud computing and DevOps services, UI/UX design, e-commerce platforms, 

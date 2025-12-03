@@ -21,13 +21,18 @@ const HeroSection = () => {
             <Fade direction="up" cascade damping={0.2} triggerOnce>
               <h1 className="hero-title fw-bold mb-4">
                 <span className="gradient-text">
+                  AuraSyntax
+                </span>
+              </h1>
+              <h2 className="hero-subtitle fw-bold mb-4" style={{ fontSize: '2rem', color: 'var(--text-secondary)', marginTop: '-1rem' }}>
+                <span>
                   Craft the Logic.<br />
                   Build What's Next.
                 </span>
-              </h1>
+              </h2>
 
               <p className="hero-paragraph mb-4" style={{ color: 'var(--text-secondary)' }}>
-                We craft modern digital experiences where creativity meets engineering. From AI and mobile apps to cloud, DevOps, and cybersecurity, AuraSyntax builds technology that inspires and performs.
+                AuraSyntax crafts modern digital experiences where creativity meets engineering. From AI and mobile apps to cloud, DevOps, and cybersecurity, AuraSyntax builds technology that inspires and performs.
               </p>
 
               <p className="hero-paragraph mb-4" style={{ color: 'var(--text-secondary)', fontSize: '1rem' }}>

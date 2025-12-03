@@ -112,8 +112,8 @@ const Home = () => {
     <SmoothScroll>
       <React.Fragment>
         <SEO
-          title="AuraSyntax - Software Development | Web & AI Solutions"
-          description="AuraSyntax provides expert software development, web development, mobile apps, AI, machine learning, blockchain, and cloud computing services. We build innovative, scalable systems that power what's next."
+          title="AuraSyntax | Software Development Company | Web & AI Solutions"
+          description="AuraSyntax is a leading software development company providing expert web development, mobile apps, AI, machine learning, blockchain, and cloud computing services. We build innovative, scalable systems that power what's next."
           keywords="AuraSyntax, software development, web development, mobile apps, AI, machine learning, blockchain, cloud computing, DevOps, UI/UX design, e-commerce, system integration, IT consulting, custom software, web applications, mobile applications"
           canonicalUrl="https://www.aurasyntax.com/"
         />
