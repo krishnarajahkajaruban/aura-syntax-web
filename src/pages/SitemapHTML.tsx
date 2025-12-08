@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { services, projects } from '@/data/mockData';
 import '../styles/custom.css';
 
 const SitemapHTML = () => {
@@ -50,52 +51,34 @@ const SitemapHTML = () => {
                 <div className="col-md-6 col-lg-4 mb-4">
                   <h2 className="h4 mb-3" style={{ color: '#43c1ce' }}>Services</h2>
                   <ul className="list-unstyled">
-                    <li className="mb-2">
-                      <Link to="/services/1" className="text-decoration-none" style={{ color: 'var(--text-secondary)' }}>
-                        Web Development
-                      </Link>
-                    </li>
-                    <li className="mb-2">
-                      <Link to="/services/2" className="text-decoration-none" style={{ color: 'var(--text-secondary)' }}>
-                        Mobile Development
-                      </Link>
-                    </li>
-                    <li className="mb-2">
-                      <Link to="/services/3" className="text-decoration-none" style={{ color: 'var(--text-secondary)' }}>
-                        AI & Machine Learning
-                      </Link>
-                    </li>
-                    <li className="mb-2">
-                      <Link to="/services/4" className="text-decoration-none" style={{ color: 'var(--text-secondary)' }}>
-                        Blockchain Development
-                      </Link>
-                    </li>
-                    <li className="mb-2">
-                      <Link to="/services/5" className="text-decoration-none" style={{ color: 'var(--text-secondary)' }}>
-                        Cloud & DevOps
-                      </Link>
-                    </li>
+                    {services.filter(s => s.status).map((service) => (
+                      <li key={service.id} className="mb-2">
+                        <Link 
+                          to={`/services/${service.id}`} 
+                          className="text-decoration-none" 
+                          style={{ color: 'var(--text-secondary)' }}
+                        >
+                          {service.serviceName}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
 
                 <div className="col-md-6 col-lg-4 mb-4">
                   <h2 className="h4 mb-3" style={{ color: '#43c1ce' }}>Projects</h2>
                   <ul className="list-unstyled">
-                    <li className="mb-2">
-                      <Link to="/projects/1" className="text-decoration-none" style={{ color: 'var(--text-secondary)' }}>
-                        Kover Drive
-                      </Link>
-                    </li>
-                    <li className="mb-2">
-                      <Link to="/projects/2" className="text-decoration-none" style={{ color: 'var(--text-secondary)' }}>
-                        Parking Deals
-                      </Link>
-                    </li>
-                    <li className="mb-2">
-                      <Link to="/projects/3" className="text-decoration-none" style={{ color: 'var(--text-secondary)' }}>
-                        Singai Restaurant
-                      </Link>
-                    </li>
+                    {projects.filter(p => p.status).map((project) => (
+                      <li key={project.id} className="mb-2">
+                        <Link 
+                          to={`/projects/${project.id}`} 
+                          className="text-decoration-none" 
+                          style={{ color: 'var(--text-secondary)' }}
+                        >
+                          {project.name}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>

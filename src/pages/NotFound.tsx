@@ -34,7 +34,7 @@ const NotFound = () => {
       <SEO
         title="404 - Page Not Found"
         description="The page you're looking for doesn't exist. Explore our services, projects, or return to the homepage."
-        canonicalUrl={`https://aurasyntax.com${location.pathname}`}
+        canonicalUrl={`https://www.aurasyntax.com${location.pathname}`}
       />
       <Navbar />
       <div className="notfound-container" style={{ minHeight: '100vh', paddingTop: '120px', paddingBottom: '80px' }}>

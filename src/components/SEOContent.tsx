@@ -6,7 +6,7 @@
 const SEOContent = () => {
   return (
     <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
-      <h1>AuraSyntax</h1>
+      <h2>AuraSyntax</h2>
       <h2>Software Development Company - Craft the Logic. Build What&apos;s Next.</h2>
       
       <p>

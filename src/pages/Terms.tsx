@@ -13,14 +13,14 @@ const Terms = () => {
         title="Terms & Conditions | AuraSyntax"
         description="Read AuraSyntax Terms & Conditions. Learn about our service agreements, intellectual property, payment terms, confidentiality, and warranty policies."
         keywords="AuraSyntax, terms and conditions, legal, service agreement, software development terms, IT consulting terms"
-        canonicalUrl="https://aurasyntax.com/terms"
+        canonicalUrl="https://www.aurasyntax.com/terms"
       />
       <Navbar />
 
       <section className="section terms-policy-section">
         <div className="container">
           <Fade direction="up" triggerOnce>
-            <h2 className="section-title gradient-text">Terms & Conditions</h2>
+            <h1 className="section-title gradient-text">Terms & Conditions</h1>
             <p className="section-subtitle">
               Last updated on: October 20, 2025
             </p>

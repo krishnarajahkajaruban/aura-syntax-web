@@ -57,15 +57,19 @@ const ProjectDetail = () => {
 
   const projectDescription = project.projectDescriptions[0]?.description?.split(' ').slice(0, 30).join(' ') || '';
   const keywords = `AuraSyntax, ${project.name}, ${project.projectType}, software development, web development, project showcase, ${project.projectType.toLowerCase().replace(/\s+/g, ', ')}`;
+  
+  // Ensure meta description is under 160 characters
+  const fullDescription = `${projectDescription}${projectDescription.length > 100 ? '...' : ''} Explore this ${project.projectType.toLowerCase()} project by AuraSyntax.`;
+  const metaDescription = fullDescription.length > 160 ? fullDescription.substring(0, 157) + '...' : fullDescription;
 
   return (
     <React.Fragment>
       <SEO
         title={`${project.name} - ${project.projectType} | AuraSyntax`}
-        description={`${projectDescription}${projectDescription.length > 100 ? '...' : ''} Explore this ${project.projectType.toLowerCase()} project by AuraSyntax.`}
+        description={metaDescription}
         keywords={keywords}
-        image={`https://aurasyntax.com${project.image}`}
-        canonicalUrl={`https://aurasyntax.com/projects/${project.id}`}
+        image={`https://www.aurasyntax.com${project.image}`}
+        canonicalUrl={`https://www.aurasyntax.com/projects/${project.id}`}
       />
       <Navbar />
 

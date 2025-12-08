@@ -50,14 +50,18 @@ const ServiceDetail = () => {
   }
 
   const keywords = `AuraSyntax, ${service.serviceName}, software development, ${service.serviceFeatures.map(f => f.feature).join(', ')}, IT services, technology solutions`;
+  
+  // Ensure meta description is under 160 characters
+  const fullDescription = `${service.description} ${service.serviceFeatures.slice(0, 2).map(f => f.feature).join(', ')} and more. Professional ${service.serviceName.toLowerCase()} solutions.`;
+  const metaDescription = fullDescription.length > 160 ? fullDescription.substring(0, 157) + '...' : fullDescription;
 
   return (
     <React.Fragment>
       <SEO
         title={`${service.serviceName} Services | AuraSyntax`}
-        description={`${service.description} ${service.serviceFeatures.slice(0, 2).map(f => f.feature).join(', ')} and more. Professional ${service.serviceName.toLowerCase()} solutions.`}
+        description={metaDescription}
         keywords={keywords}
-        canonicalUrl={`https://aurasyntax.com/services/${service.id}`}
+        canonicalUrl={`https://www.aurasyntax.com/services/${service.id}`}
       />
       <Navbar />
 

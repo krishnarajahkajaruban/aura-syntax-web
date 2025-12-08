@@ -14,14 +14,14 @@ const Privacy = () => {
         title="Privacy Policy | AuraSyntax"
         description="AuraSyntax Privacy Policy. Learn how we collect, use, and protect your personal information. Your privacy is important to us."
         keywords="AuraSyntax, privacy policy, data protection, GDPR, user privacy, information security"
-        canonicalUrl="https://aurasyntax.com/privacy"
+        canonicalUrl="https://www.aurasyntax.com/privacy"
       />
       <Navbar />
 
       <section className="section terms-policy-section">
         <div className="container">
           <Fade direction="up" triggerOnce>
-            <h2 className="section-title gradient-text">Privacy Policy</h2>
+            <h1 className="section-title gradient-text">Privacy Policy</h1>
             <p className="section-subtitle">
               Last updated on: October 20, 2025
             </p>
