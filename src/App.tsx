@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import MouseCursor from "./components/MouseCursor";
 import { lazy, Suspense } from "react";
@@ -47,46 +47,48 @@ const App = () => (
           <Sonner />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route 
-              path="/services/:id" 
+            <Route
+              path="/services/:id"
               element={
                 <Suspense fallback={<div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Loading...</div>}>
                   <ServiceDetail />
                 </Suspense>
-              } 
+              }
             />
-            <Route 
-              path="/projects/:id" 
+            <Route
+              path="/projects/:id"
               element={
                 <Suspense fallback={<div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Loading...</div>}>
                   <ProjectDetail />
                 </Suspense>
-              } 
+              }
             />
-            <Route 
-              path="/terms" 
+            <Route
+              path="/terms"
               element={
                 <Suspense fallback={<div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Loading...</div>}>
                   <Terms />
                 </Suspense>
-              } 
+              }
             />
-            <Route 
-              path="/privacy" 
+            <Route
+              path="/privacy"
               element={
                 <Suspense fallback={<div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Loading...</div>}>
                   <Privacy />
                 </Suspense>
-              } 
+              }
             />
-            <Route 
-              path="/sitemap" 
-              element={
-                <Suspense fallback={<div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Loading...</div>}>
-                  <SitemapHTML />
-                </Suspense>
-              } 
+            <Route path="/sitemap" element={
+              <Suspense fallback={<div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Loading...</div>}>
+                <SitemapHTML />
+              </Suspense>
+            }
             />
+            {/* Redirects for SEO and legacy links */}
+            <Route path="/services" element={<Navigate to="/" replace />} />
+            <Route path="/projects" element={<Navigate to="/" replace />} />
+            <Route path="/contact" element={<Navigate to="/" replace />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </TooltipProvider>

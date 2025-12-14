@@ -17,8 +17,9 @@ const SEO = ({
   image = 'https://www.aurasyntax.com/og-image.png',
   url = 'https://www.aurasyntax.com',
   type = 'website',
-  canonicalUrl
-}: SEOProps) => {
+  canonicalUrl,
+  noindex = false
+}: SEOProps & { noindex?: boolean }) => {
   const finalTitle = title.includes('AuraSyntax') ? title : `${title} | AuraSyntax`;
   // Ensure canonical URL ends with / for homepage, otherwise use as provided
   // Use www version to match redirect
@@ -38,9 +39,9 @@ const SEO = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={finalUrl} />
-      
+
       {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
       <meta name="googlebot" content="index, follow" />
 
       {/* Open Graph / Facebook */}

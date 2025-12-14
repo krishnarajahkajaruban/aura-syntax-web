@@ -35,6 +35,7 @@ const NotFound = () => {
         title="404 - Page Not Found"
         description="The page you're looking for doesn't exist. Explore our services, projects, or return to the homepage."
         canonicalUrl={`https://www.aurasyntax.com${location.pathname}`}
+        noindex={true}
       />
       <Navbar />
       <div className="notfound-container" style={{ minHeight: '100vh', paddingTop: '120px', paddingBottom: '80px' }}>

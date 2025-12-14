@@ -67,15 +67,7 @@
       "destination": "/robots.txt"
     },
     {
-      "source": "/terms",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/privacy",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/sitemap",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
