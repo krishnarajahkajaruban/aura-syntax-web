@@ -12,7 +12,7 @@ interface SEOProps {
 
 const SEO = ({
   title = 'AuraSyntax | Software Development Company | Web & AI Solutions',
-  description = 'AuraSyntax is a leading software development company specializing in web, mobile, AI, blockchain, and cloud solutions. We build scalable systems that power what\'s next.',
+  description = 'AuraSyntax is a leading software development company providing expert web development, mobile apps, AI, machine learning, blockchain, and cloud computing services.',
   keywords = 'AuraSyntax, software development, web development, mobile apps, AI, machine learning, blockchain, cloud computing, DevOps, UI/UX design, e-commerce, system integration, IT consulting, custom software, web applications, mobile applications',
   image = 'https://www.aurasyntax.com/og-image.png',
   url = 'https://www.aurasyntax.com',

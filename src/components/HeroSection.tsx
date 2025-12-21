@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import { useNavigate } from 'react-router-dom';
@@ -21,7 +20,7 @@ const HeroSection = () => {
             <Fade direction="up" cascade damping={0.2} triggerOnce>
               <h1 className="hero-title fw-bold mb-4">
                 <span className="gradient-text">
-                  AuraSyntax
+                  AuraSyntax — Software Development Company
                 </span>
               </h1>
               <h2 className="hero-subtitle fw-bold mb-4" style={{ fontSize: '2rem', color: 'var(--text-secondary)', marginTop: '-1rem' }}>
@@ -105,7 +104,7 @@ const HeroSection = () => {
                 className="img-fluid hero-img"
                 width="1200"
                 height="957"
-                fetchpriority="high"
+                {...({ fetchpriority: "high" } as Record<string, string>)}
                 style={{ aspectRatio: '1200/957' }}
                 draggable={false}
               />

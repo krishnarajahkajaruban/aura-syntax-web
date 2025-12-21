@@ -34,6 +34,21 @@
   status = 200
 
 [[redirects]]
+  from = "/services"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/projects"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/"
+  status = 301
+
+[[redirects]]
   from = "/terms"
   to = "/index.html"
   status = 200
@@ -45,6 +60,11 @@
 
 [[redirects]]
   from = "/sitemap"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/*"
   to = "/index.html"
   status = 200
 
