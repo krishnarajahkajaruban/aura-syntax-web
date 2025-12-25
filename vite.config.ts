@@ -20,12 +20,15 @@ export default defineConfig({
     chunkSizeWarningLimit: 600, // Increase limit to 600KB (gzipped is much smaller)
     rollupOptions: {
       output: {
+        entryFileNames: "assets/[name].[hash].js",
+        chunkFileNames: "assets/[name].[hash].js",
+        assetFileNames: "assets/[name].[hash].[ext]",
         // Use a more conservative chunking strategy to avoid circular dependencies
         // manualChunks: (id) => {
         //   if (id.includes('node_modules')) {
         //     // Strategy: Only split truly independent, heavy libraries
         //     // Keep interdependent packages together to avoid initialization issues
-            
+
         //     // 1. React ecosystem - keep ALL React dependencies together
         //     // This includes React, React DOM, React Router, and ALL React-dependent packages
         //     if (
@@ -60,32 +63,32 @@ export default defineConfig({
         //     ) {
         //       return 'react-vendor';
         //     }
-            
+
         //     // 2. GSAP (standalone, heavy animation library)
         //     if (id.includes('gsap')) {
         //       return 'gsap-vendor';
         //     }
-            
+
         //     // 3. LightGallery (heavy, only used in ProjectDetail, lazy loaded)
         //     if (id.includes('lightgallery') || id.includes('lg-')) {
         //       return 'gallery-vendor';
         //     }
-            
+
         //     // 4. PrimeReact (heavy, only used in ProjectDetail, lazy loaded)
         //     if (id.includes('primereact')) {
         //       return 'primereact-vendor';
         //     }
-            
+
         //     // 5. Bootstrap ecosystem (independent)
         //     if (id.includes('bootstrap')) {
         //       return 'bootstrap-vendor';
         //     }
-            
+
         //     // 6. Swiper (independent carousel library)
         //     if (id.includes('swiper')) {
         //       return 'swiper-vendor';
         //     }
-            
+
         //     // 7. All other packages stay together to avoid circular dependencies
         //     // This includes axios, @emotion/react, remixicon, and other utilities
         //     return 'vendor';
