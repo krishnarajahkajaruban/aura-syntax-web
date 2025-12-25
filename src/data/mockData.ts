@@ -409,8 +409,64 @@ export const projects: Project[] = [
       { id: 25, projectId: 4, imagePath: "/assets/projects/buildora-engineers/snap-7.webp" }
     ],
     status: true
+  },
+  {
+    id: 5,
+    name: "Byldist",
+    image: "/assets/projects/byldist/cover.webp",
+    companyLogo: "/assets/projects/byldist/logo.webp",
+    projectType: "Architect & Engineering Website",
+    projectDescriptions: [
+      {
+        id: 17,
+        projectId: 4,
+        description:
+          "Byldist was founded by architects and designers to ensure inspired designs are executed precisely, without compromise, miscommunication, or loss of creative intent."
+      },
+      {
+        id: 18,
+        projectId: 4,
+        description:
+          "The company bridges the gap between design and construction by understanding architectural vision, technical realities, and execution challenges equally well."
+      },
+      {
+        id: 19,
+        projectId: 4,
+        description:
+          "Byldist partners with leading architecture firms and design studios to deliver projects that faithfully reflect original concepts and specifications."
+      },
+      {
+        id: 20,
+        projectId: 4,
+        description:
+          "Its process-driven approach emphasizes transparency, coordination, and accountability throughout every phase of project execution."
+      },
+      {
+        id: 21,
+        projectId: 4,
+        description:
+          "The team combines deep design literacy with hands-on construction expertise, ensuring smoother workflows and consistent on-site decision-making."
+      },
+      {
+        id: 22,
+        projectId: 4,
+        description:
+          "Byldist helps brands and designers complete projects on time, stress-free, and aligned perfectly with their intended visual and functional outcomes."
+      }
+    ],
+    hasPreview: true,
+    previewLink: "https://www.byldist.com/",
+    projectSnapShots: [
+      { id: 21, projectId: 4, imagePath: "/assets/projects/byldist/snap-1.webp" },
+      { id: 22, projectId: 4, imagePath: "/assets/projects/byldist/snap-2.webp" },
+      { id: 23, projectId: 4, imagePath: "/assets/projects/byldist/snap-3.webp" },
+      { id: 24, projectId: 4, imagePath: "/assets/projects/byldist/snap-4.webp" },
+      { id: 25, projectId: 4, imagePath: "/assets/projects/byldist/snap-5.webp" },
+      { id: 25, projectId: 4, imagePath: "/assets/projects/byldist/snap-6.webp" },
+      { id: 25, projectId: 4, imagePath: "/assets/projects/byldist/snap-7.webp" }
+    ],
+    status: true
   }
-
 ];
 
 

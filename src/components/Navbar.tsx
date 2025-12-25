@@ -151,6 +151,14 @@ const Navbar = () => {
             </button>
 
             <button
+              aria-label='Projects'
+              onClick={() => handleNavClick('projects')}
+              className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
+            >
+              Projects
+            </button>
+
+            <button
               aria-label='Contact'
               onClick={() => handleNavClick('contact')}
               className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
