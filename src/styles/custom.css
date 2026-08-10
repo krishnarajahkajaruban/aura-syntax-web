@@ -1182,8 +1182,9 @@ a:hover {
 /* Back to Top Button */
 .back-to-top {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  /* Wisp is 85px square at right/bottom 20px; match its horizontal center. */
+  bottom: 120px;
+  right: calc(20px + (85px - 3rem) / 2);
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -1819,8 +1820,8 @@ a:hover {
   .back-to-top {
     width: 2.5rem;
     height: 2.5rem;
-    bottom: 1.5rem;
-    right: 1.5rem;
+    bottom: 120px;
+    right: calc(20px + (85px - 2.5rem) / 2);
   }
 
   .btn-primary-aura,
