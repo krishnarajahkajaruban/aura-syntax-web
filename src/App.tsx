@@ -21,6 +21,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from '@vercel/analytics/react';
 import GoogleAnalytics from './components/GoogleAnalytics';
 import AhrefsAnalytics from './components/AhrefsAnalytics';
+import WispChatbot from './components/WispChatbot';
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
       <Analytics />
       <GoogleAnalytics />
       <AhrefsAnalytics />
+      <WispChatbot />
 
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
